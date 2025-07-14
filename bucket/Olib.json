@@ -9,7 +9,7 @@
     "post_install": [
         "$scriptPath=./config.ps1",
         "$content = Get-Content -Path $scriptPath -Raw",
-        "$updatedContent = $content.Replace('`'$persist`'', \"`\"$persist`\"\")",
+        "$updatedContent = $content.Replace('\\'$persist\\'', \\\"$persist\\\")",
         "Set-Content -Path $scriptPath -Value $updatedContent -Encoding Ascii",
         "./config.ps1"
     ]
