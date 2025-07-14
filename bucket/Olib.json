@@ -10,7 +10,7 @@
         "$scriptPath='./config.ps1'",
         "$content = Get-Content -Path $scriptPath -Raw",
         "$updatedContent = $content.Replace('$persist', $persist)",
-        "Set-Content -Path $scriptPath -Value $updatedContent -Encoding Ascii",
+        "Set-Content -Path $scriptPath -Value $updatedContent -Encoding UTF8",
         "./config.ps1"
     ]
 }
