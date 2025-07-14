@@ -1,0 +1,31 @@
+{
+  "Settings": {
+    "ac": null,
+    "acUrlSwitch": false,
+    "Accurate": false,
+    "CacheFolder": "",
+    "DownloadFolder": "",
+    "downloadSwitch": false,
+    "DpiScale": "Auto",
+    "Extensions": 0,
+    "Host": 2,
+    "Language": 0,
+    "RepeatFiles": true,
+    "SearchMode": 0,
+    "Nums": 50,
+    "View": true,
+    "height": 731,
+    "width": 1357
+  },
+  "QFluentWidgets": {
+    "ButtonColor": "#ff009faa",
+    "PanelColor": "#ffdce2f1",
+    "ThemeColor": "#ff009faa",
+    "ThemeMode": "Light"
+  },
+  "Update": {
+    "CheckUpdateAtStartUp": true,
+    "LatestVersion": "2.4.0",
+    "UpdateMode": true
+  }
+}
