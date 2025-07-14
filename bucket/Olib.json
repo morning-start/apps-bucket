@@ -6,11 +6,5 @@
     "hash": "468EEE9AAD35BD90C936AE48D357FD740832E4676EC71152BEB6AEA02FAE0A69",
     "shortcuts": [["Olib2.4.0.exe", "Olib"]],
     "persist": ["config", "cache", "book"],
-    "post_install": [
-        "$scriptPath='./config.ps1'",
-        "$content = Get-Content -Path $scriptPath -Raw",
-        "$updatedContent = $content.Replace('$persist_dir', $persist_dir)",
-        "Set-Content -Path $scriptPath -Value $updatedContent -Encoding UTF8",
-        "Invoke-Expression $updatedContent"
-    ]
+    "post_install": "./config.ps1"
 }

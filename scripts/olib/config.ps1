@@ -15,5 +15,4 @@ else {
     $config.Settings.DownloadFolder = "$persist_dir\book"
 }
 ConvertTo-Json $config | Set-Content -Path $configFilePath
-
 Write-Host "Configuration updated successfully."
