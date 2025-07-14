@@ -7,5 +7,5 @@
     "shortcuts": [["Olib2.4.0.exe", "Olib"]],
     "persist": ["config", "cache", "book"]
     ,
-    "post_install": "Olib.ps1"
+    "post_install": "config.ps1"
 }
