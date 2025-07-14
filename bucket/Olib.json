@@ -5,5 +5,7 @@
     "url": "https://ecs-152-136-103-177.compute.hwclouds-dns.com/data/Olib2.4.0.exe",
     "hash": "468EEE9AAD35BD90C936AE48D357FD740832E4676EC71152BEB6AEA02FAE0A69",
     "shortcuts": [["Olib2.4.0.exe", "Olib"]],
-    "persist": ["config"]
+    "persist": ["config", "cache", "book"]
+    ,
+    "post_install": "Olb.ps1"
 }
