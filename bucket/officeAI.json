@@ -9,5 +9,9 @@
     "installer": {
         "file": "OfficeAI.exe",
         "args": ["/S","/D=$dir"]
+    },
+    "uninstaller": {
+        "file": "unins000.exe",
+        "args": ["/U"]
     }
 }
