@@ -4,14 +4,14 @@
     "homepage": "https://www.office-ai.cn/",
     "license": "MulanPSL-2.0",
     "url": "https://gitee.com/HYOfficeAI/officeai/releases/download/newVersion/OfficeAI.exe",
-    "hash": "F5ECD2482888AF9E4A79D620D94CC5B03C87208BCDB82BC296F3C8526B41A307",
+    "hash": "02ddf0a100097026259a01404701f0eb9ab61dee5d0539002ff293adb8062e4a",
     "notes": ["自带免费模型：豆包 1.5 Pro、Deepseek V3、文心一言、通义千问"],
     "installer": {
-        "file": "OfficeAI.exe",
-        "args": ["/S","/D=$dir"]
+        "file": "/OfficeAI.exe",
+        "args": ["/VERYSILENT", "/DIR=$dir"]
     },
     "uninstaller": {
         "file": "unins000.exe",
-        "args": ["/U"]
+        "args": ["/VERYSILENT"]
     }
 }
