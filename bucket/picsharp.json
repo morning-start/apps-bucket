@@ -4,7 +4,7 @@
     "homepage": "https://github.com/AkiraBit/PicSharp",
     "license": "GPL-3.0-or-later",
     "url": "https://github.com/AkiraBit/PicSharp/releases/download/v1.5.0/PicSharp_1.5.0_x64-setup.exe",
-    "hash": "bc4ee4219a7c43fbaf44c72573065ae724bf620121b35a01a786884e0768adf8",
+    "hash": "1c76c4faf7f26657f4e3421433652767daea677bfeaa539d4e077bb05708bdce",
     "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/AkiraBit/PicSharp/releases/download/v$version/PicSharp_$version_x64-setup.exe"
