@@ -16,13 +16,15 @@
         ]
     ],
     "installer": {
-        "file": "/PicSharp_$version_x64-setup.exe",
-        "args": [
-            "/VERYSILENT",
-            "/DIR=$dir"
+        "script": [
+            "$installerPath = Join-Path -Path $dir -ChildPath \"PicSharp_$version_x64-setup.exe\"",
+            "Start-Process -FilePath $installerPath -ArgumentList \"/VERYSILENT\"  \"/DIR=$dir\" -Wait"
         ]
-    },    "uninstaller": {
+    },
+    "uninstaller": {
         "file": "Uninstall PicSharp",
-        "args": ["/VERYSILENT"]
+        "args": [
+            "/VERYSILENT"
+        ]
     }
 }
