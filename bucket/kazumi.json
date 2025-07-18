@@ -9,7 +9,12 @@
             "hash": "46e8c1e8b06f27042f33e264c05570c551bb0859a09728140a286938d3e95c07"
         }
     },
-    "shortcuts": [["kazumi.exe", "kazumi"]],
+    "shortcuts": [
+        [
+            "kazumi.exe",
+            "kazumi"
+        ]
+    ],
     "checkver": "github",
     "autoupdate": {
         "architecture": {
@@ -19,15 +24,3 @@
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
