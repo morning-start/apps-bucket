@@ -4,7 +4,7 @@
   "homepage": "https://yuanbao.tencent.com/",
   "license": "freeware",
   "url": "https://cdn-hybrid-prod.hunyuan.tencent.com/Desktop/official/7f683f82201d4ea78decc1f5de5c465c/yuanbao_2.32.0.612_x64.exe",
-  "hash": "2ff42ba2646f5b46f36b26c919ea987033dc4bb1ccc37318608e59c6dd25171e",
+  "hash": "f44653a772d1830e863e814a2585fe4ca63e7cef7605b860b709955462a5a7d3",
   "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\" -Recurse",
   "shortcuts": [
     [
