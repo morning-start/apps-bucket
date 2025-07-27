@@ -8,7 +8,7 @@
     "installer": {
         "script": [
             "$filename = \"$dir\\yuanbao_$version_x64.exe\"",
-            "Start-Process -FilePath $filename  -ArgumentList @('/S', '/InstallationType=JustMe', '/RegisterPython=0', '/AddToPath=0', '/NoRegistry=1', \"/D=$dir\") -Wait | Out-Null"
+            "Start-Process $filename  -ArgumentList @('/S', '/InstallationType=JustMe', '/RegisterPython=0', '/AddToPath=0', '/NoRegistry=1', \"/D=$dir\") -Wait | Out-Null"
         ]
     },
     "shortcuts": [["yuanbao.exe", "Yuanbao"]],
