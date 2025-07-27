@@ -7,7 +7,7 @@
     "hash": "f44653a772d1830e863e814a2585fe4ca63e7cef7605b860b709955462a5a7d3",
     "installer": {
         "script": [
-            "$filename = \"$dir\\yuanbao_$version+_x64.exe\"",
+            "$filename = \"$dir\\yuanbao_$version_x64.exe\"",
             "Start-Process -FilePath $filename  -ArgumentList @('/S', '/InstallationType=JustMe', '/RegisterPython=0', '/AddToPath=0', '/NoRegistry=1', \"/D=$dir\") -Wait | Out-Null"
         ]
     },
