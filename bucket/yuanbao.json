@@ -8,7 +8,7 @@
   "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\" -Recurse",
   "shortcuts": [
     [
-      "yuanbao.exe",
+      "yuanbao_$version_x64.exe",
       "Yuanbao"
     ]
   ],
