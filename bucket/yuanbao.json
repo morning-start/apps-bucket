@@ -1,0 +1,27 @@
+{
+  "version": "2.32.0.612",
+  "description": "LLM client by Tencent",
+  "homepage": "https://yuanbao.tencent.com/",
+  "license": "freeware",
+  "url": "https://cdn-hybrid-prod.hunyuan.tencent.com/Desktop/official/7f683f82201d4ea78decc1f5de5c465c/yuanbao_2.32.0.612_x64.exe",
+  "hash": "2ff42ba2646f5b46f36b26c919ea987033dc4bb1ccc37318608e59c6dd25171e",
+  "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\" -Recurse",
+  "shortcuts": [
+    [
+      "yuanbao.exe",
+      "Yuanbao"
+    ]
+  ],
+      "checkver": {
+        "url": " https://yuanbao.tencent.com/api/info/public/general",
+        "jp": "$.pcDownloadUrl.windows",
+        "regex": "yuanbao_([\\d.]+)_"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://cdn-hybrid-prod.hunyuan.tencent.com/Desktop/official/7f683f82201d4ea78decc1f5de5c465c/yuanbao_$version_x64.exe"
+            }
+        }
+    }
+}
