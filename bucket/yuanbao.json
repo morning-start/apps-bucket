@@ -7,7 +7,8 @@
   "hash": "f44653a772d1830e863e814a2585fe4ca63e7cef7605b860b709955462a5a7d3",
   "post_install":[
         "Remove-Item \"$dir\\`$PLUGINSDIR\" -Recurse",
-        "Rename-Item \"$dir\\yuanbao_\"+$version+\"_x64.exe\" \"$dir\\yuanbao.exe\""
+        "$item= \"yuanbao_\"+$version+\"_x64.exe\"",
+        "Rename-Item \"$dir\\$item\" \"$dir\\yuanbao.exe\""
     ],
   "shortcuts": [
     [
