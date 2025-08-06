@@ -5,9 +5,9 @@
     "license": "BSD-3-Clause",
     "url": "https://downloads.wiris.com/mathtype/windows/MathType-win-zh-7.4.8.0.exe",
     "installer": {
-        "file": "/MathType-win-zh-7.4.8.0.exe",
-        "args": ["/VERYSILENT", "/DIR=$dir"]
+        "script": "Start-Process -Wait $dir\\MathType-win-zh-7.4.8.0.exe"
     },
+    "pre_install": ["# 安装路径提示", "Write-Host \"Install Dir: $dir\""],
     "post_install": [
         "$patch=\"$bucketsdir\\$bucket\\scripts\\mathtype\\MathType_v7.x_Patch.exe\"",
         "Copy-Item -Path $patch -Destination $dir -Force",
