@@ -1,28 +1,14 @@
 {
-    "version": "6.40.11",
-    "description": "Internet Download Manager (IDM) is a tool to increase download speeds by up to 5 times, resume and schedule downloads.",
-    "homepage": "http://internetdownloadmanager.com/index.html",
-    "license": {
-        "identifier": "Freeware"
-    },
-    "notes":[
-        "activate idm use:",
-        "$persist_dir/IAS/activate.pa1"
-    ],
-    "depends": "sudo",
-    "url": "https://pan.jiemi.workers.dev/?file=/scoop/IDM/internet_download_manager_6.40.11.zip",
-    "hash": "60002f734711f57b05ef6ba1402149e59dcbd1e94fca999f1fbaab474986998b",
-    "pre_install": [
-        "Get-Process IDM* | Stop-Process -Force",
-        "Get-Process IEMon* | Stop-Process -Force",
-        "Get-ChildItem \"$dir\\Internet Download Manager*.exe\" | Rename-Item  -newname 'Installer.exe'",
-        "Get-ChildItem $dir -Exclude Installer.exe, install.json, manifest.json | ForEach-Object {  Remove-Item \"$dir\\$($_.Name)\" -Force -ErrorAction SilentlyContinue }"
-    ],
+    "version": "642build42",
+    "description": "(IDM) is a tool to increase download speeds by up to 5 times, resume and schedule downloads.",
+    "license": "© ToneC",
+    "homepage": "http://www.internetdownloadmanager.com",
+    "notes": ["activate idm use:", "$persist_dir/IAS/activate.pa1"],
+    "url": "https://mirror2.internetdownloadmanager.com/idman642build42.exe#/idman-install.exe",
+    "hash": "67fb513d0d1fa3e58b4e95dcf8d70e618f4e277474c0e88bc8d1a3e9d0730db1",
     "installer": {
-        "script": [
-            "Start-Process -filepath \"$dir\\Installer.exe\" -ArgumentList \"/DIR=$dir /NoIcons=1 /SILENT\"",
-            "Start-Sleep -s 60"
-        ]
+        "script": "Start-Process -Wait $dir\\idman-install.exe /skipdlgs",
+        "keep": true
     },
     "persist": ["IAS"],
     "post_install": [
@@ -31,24 +17,12 @@
         "Move-Item -Path $script -Destination \"$persist_dir\\IAS\" -Force",
         "Set-Content -Path $script -Value (Get-Content $script -Raw).Replace('$persist_dir', \"$persist_dir\\IAS\")"
     ],
-    "uninstaller": {
-        "script": [
-            "Stop-Process -Name explorer, IDM*, IEMonitor*, IDMMsgHost*, MediumILStart*, IDMIntegrator64* -Force | Out-Null",
-            "Remove-Item IDMShellExt*.dll -Force -ErrorAction SilentlyContinue",
-            "Start-Process -FilePath \"$dir\\unins000.exe\" -ArgumentList /SILENT -WorkingDirectory \"$dir\" -Wait | Out-Null",
-            "Write-Host \"The '$app' has been uninstalled.\" -Foreground Magenta"
-        ]
-    },
     "checkver": {
-        "url": "https://github.com/Ryanjiena/scoop-apps/raw/version/idm",
-        "regex": "(?<filename>internet_download_manager_(?<version>[\\d.]+)\\.zip)"
+        "url": "http://www.internetdownloadmanager.com/download.html",
+        "regex": "idman([\\d]+)build([\\d]+)\\.exe",
+        "replace": "${1}build${2}"
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/scoop/IDM/$matchFilename",
-        "hash": {
-            "url": "https://github.com/Ryanjiena/scoop-apps/raw/version/idm",
-            "mode": "extract",
-            "regex": "^$sha256([\\s]+)$basename"
-        }
+        "url": "https://mirror2.internetdownloadmanager.com/idman$match1build$match2.exe#/idman-install.exe"
     }
 }
