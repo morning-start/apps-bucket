@@ -7,10 +7,10 @@
     "url": "https://mirror2.internetdownloadmanager.com/idman642build42.exe#/idman-install.exe",
     "hash": "67fb513d0d1fa3e58b4e95dcf8d70e618f4e277474c0e88bc8d1a3e9d0730db1",
     "installer": {
-        "file": "idman-install.exe",
+        "file": "/idman-install.exe",
         "args": [
-            "/S",
-            "/D=$dir"
+            "/VERYSILENT",
+            "/DIR=$dir"
         ],
         "keep": true
     },
