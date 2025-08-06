@@ -3,7 +3,7 @@
     "description": "为 Windows 和 Mac 电脑上的 Microsoft Word 和 PowerPoint 以及 Mac 电脑上的 Pages 文稿、Keynote 讲演和 Numbers 表格添加新的方程编辑器工具栏。它适用于：Word PowerPoint Pages Keynote Numbers ...等。",
     "homepage": "https://mathtype.org",
     "license": "BSD-3-Clause",
-    "url": "https://store.wiris.com/zh/products/mathtype/download/windows/confirm?dl=WIN_V7_ZH",
+    "url": "https://downloads.wiris.com/mathtype/windows/MathType-win-zh-7.8.2.441.exe",
     "installer": {
         "script": "Start-Process -Wait $fname"
     },
