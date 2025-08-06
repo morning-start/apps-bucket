@@ -4,8 +4,9 @@
     "homepage": "https://mathtype.org",
     "license": "BSD-3-Clause",
     "url": "https://downloads.wiris.com/mathtype/windows/MathType-win-zh-7.8.2.441.exe",
+    "hash":"6bfaa501bf0b327bb1edc0a44548cde24355db7264bbe0a29908bbcc35702fd5",
     "installer": {
-        "script": "Start-Process -Wait $fname"
+        "script": "Start-Process -Wait \"$dir\\$fname\""
     },
     "pre_install": ["# 安装路径提示", "Write-Host \"Install Dir: $dir\""],
     "post_install": [
