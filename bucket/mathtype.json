@@ -11,6 +11,6 @@
     "post_install": [
         "$patch=\"$bucketsdir\\$bucket\\scripts\\mathtype\\MathType_v7.x_Patch.exe\"",
         "Copy-Item -Path $patch -Destination $dir -Force",
-        "& $dir\\MathType_v7.x_Patch.exe"
+        "Start-Process -Wait $dir\\MathType_v7.x_Patch.exe"
     ]
 }
