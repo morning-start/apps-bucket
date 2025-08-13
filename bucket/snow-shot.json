@@ -12,7 +12,7 @@
     "shortcuts": [
         [
             "app.exe",
-            "snow-shot"
+            "SnowShot"
         ]
     ],
     "checkver": "github",
