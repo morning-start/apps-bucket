@@ -1,5 +1,5 @@
 {
-    "version": "0.10.1",
+    "version": "0.11.6",
     "description": "Get up and running with large language models locally.",
     "homepage": "https://ollama.com/",
     "license": "MIT",
@@ -9,21 +9,19 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/ollama/ollama/releases/download/v0.10.1/ollama-windows-amd64.zip",
-            "hash": "7ca428f7a395a7e6f055ae5aaae1f9605a8fab98636e2972ecd9cb29bd605d3f"
+            "url": "https://github.com/ollama/ollama/releases/download/v0.11.6/ollama-windows-amd64.zip",
+            "hash": "34c9d26f43a4263aaf909e1ea54c75a168dc30cec98a48931188807e4e8a72fc"
         },
         "arm64": {
-            "url": "https://github.com/ollama/ollama/releases/download/v0.10.1/ollama-windows-arm64.zip",
-            "hash": "d565407d22d480a5569ae77cc26ef33f8880f8c308a989b4f009aeb8f5bf3673"
+            "url": "https://github.com/ollama/ollama/releases/download/v0.11.6/ollama-windows-arm64.zip",
+            "hash": "a149691481fc19010adbabb1d1df34c467e05b70334a7bba87965c88ef5befe8"
         }
     },
     "bin": "ollama.exe",
     "env_set": {
-        "OLLAMA_MODELS":"$persist_dir/models"
+        "OLLAMA_MODELS": "$persist_dir/models"
     },
-    "persist": [
-        "models"
-    ],
+    "persist": "models",
     "checkver": {
         "github": "https://github.com/ollama/ollama"
     },
