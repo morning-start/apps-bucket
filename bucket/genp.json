@@ -1,0 +1,22 @@
+{
+    "version": "3.6.4",
+    "description": "Adobe GenP 汉化",
+    "homepage": "https://gen.paramore.su/",
+    "license": "GPL-2.0-only",
+    "url": "https://github.com/etherized/GenP/releases/download/cgp-v3.6.4/AdobeGenP.exe",
+    "hash": "bf91fbc4c1ec50b374e78f6753df416623ec79c49c2d65b99ead678157f1b7de",
+    "shortcuts": [["AdobeGenP.exe", "AdobeGenP"]],
+    "checkver": "github",
+    "pre_install": [
+        "if (!(Test-Path $persist_dir)) { mkdir $persist_dir }",
+        "$configPath = \"$persist_dir\\config.ini\"",
+        "if (!(Test-Path $configPath)) {",
+        "    $url = \"https://raw.githubusercontent.com/etherized/GenP/refs/heads/cgp-cn/src/config.ini\"",
+        "    Invoke-WebRequest $url -OutFile $configPath",
+        "}",
+        "New-Item -ItemType SymbolicLink -Path \"$dir\\config.ini\" -Target $configPath"
+    ],
+    "autoupdate": {
+        "url": "https://github.com/etherized/GenP/releases/download/cgp-v$version/AdobeGenP.exe"
+    }
+}

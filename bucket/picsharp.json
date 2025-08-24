@@ -1,0 +1,31 @@
+{
+    "version": "1.5.0",
+    "description": "A feature-rich, efficient and flexible cross-platform desktop image compression application.",
+    "homepage": "https://github.com/AkiraBit/PicSharp",
+    "license": "GPL-3.0-or-later",
+    "url": "https://github.com/AkiraBit/PicSharp/releases/download/v1.5.0/PicSharp_1.5.0_x64_en-US.msi",
+    "hash": "5ac46faf34aa6474f8b913e6c8c101feb6da03dc9ff5c33265046fd6bfb5e4c9",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/AkiraBit/PicSharp/releases/download/v$version/PicSharp_$version_x64_en-US.msi"
+    },
+    "shortcuts": [
+        [
+            "PicSharp.exe",
+            "PicSharp"
+        ]
+    ],
+    "pre_install": [
+        "$sourceDir = Join-Path $dir \"PFiles\\PicSharp\"",
+        "$items = Get-ChildItem -Path $sourceDir",
+        "foreach ($item in $items) {",
+        "    $destinationPath = Join-Path $dir $item.Name",
+        "    if (Test-Path -Path $destinationPath) {",
+        "        Remove-Item -Path $destinationPath -Recurse -Force",
+        "    }",
+        "    Move-Item -Path $item.FullName -Destination $dir -Force",
+        "}",
+
+        "Remove-Item -Path (Join-Path $dir \"PFiles\") -Recurse -Force"
+    ]
+}

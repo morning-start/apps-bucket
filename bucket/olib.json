@@ -1,0 +1,27 @@
+{
+    "version": "2.4.0",
+    "homepage": "https://github.com/shiyi-0x7f/o-lib",
+    "license": "GPL-3.0-only",
+    "url": "https://ecs-152-136-103-177.compute.hwclouds-dns.com/data/Olib2.4.0.exe",
+    "hash": "468EEE9AAD35BD90C936AE48D357FD740832E4676EC71152BEB6AEA02FAE0A69",
+    "shortcuts": [["Olib2.4.0.exe", "Olib"]],
+    "persist": ["config", "cache", "book"],
+    "post_install": [
+        "$configFilePath = \"$persist_dir\\config\\config.json\"",
+        "if (-not (Test-Path -Path $configFilePath)) {",
+        "    $config = @{",
+        "        \"Settings\" = @{",
+        "            \"CacheFolder\" = \"$persist_dir\\cache\"",
+        "            \"DownloadFolder\" = \"$persist_dir\\book\"",
+        "        }",
+        "    }",
+        "}",
+        "else {",
+        "    $config = Get-Content -Path $configFilePath | ConvertFrom-Json",
+        "    $config.Settings.CacheFolder = \"$persist_dir\\cache\"",
+        "    $config.Settings.DownloadFolder = \"$persist_dir\\book\"",
+        "}",
+        "ConvertTo-Json $config | Set-Content -Path $configFilePath",
+        "Write-Host \"Configuration updated successfully.\""
+    ]
+}

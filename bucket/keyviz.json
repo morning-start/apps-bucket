@@ -1,0 +1,32 @@
+{
+  "version": "2.0.0a2",
+  "description": "A free and open-source tool to visualize your keystrokes in real-time.",
+  "homepage": "https://mularahul.github.io/keyviz/",
+  "license": "GPL-3.0-only",
+  "suggest": {
+    "vcredist": "extras/vcredist2022"
+  },
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/mulaRahul/keyviz/releases/download/v2.0.0a2/keyviz-v2.0.0a2-windows.zip",
+      "hash": "ac0e728a9641d3aac68e2dcdd68ba2e3875f61185165cfa7f7cb40b23d7e8bcf"
+    }
+  },
+  "shortcuts": [
+    [
+      "keyviz.exe",
+      "Keyviz"
+    ]
+  ],
+  "checkver": {
+    "url": "https://github.com/mulaRahul/keyviz/tags",
+    "regex": "tag/v([\\d.\\w]+)"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/mulaRahul/keyviz/releases/download/v$version/keyviz-v$version-windows.zip"
+      }
+    }
+  }
+}
