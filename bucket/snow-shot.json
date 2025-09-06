@@ -5,14 +5,14 @@
     "license": "GPL-3.0",
     "url": "https://github.com/mg-chao/snow-shot/releases/download/0.2.3-beta-20250901/Snow.Shot_0.2.3-beta-20250901_windows-x64.exe#/dl.7z",
     "hash": "168274cb45e2134f8f6f8e37f183ceee75f4e544661c7b1e6256149c29adfb12",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/mg-chao/snow-shot/releases/download/$version/Snow.Shot_$version_windows-x64.exe"
+    },
     "shortcuts": [
         [
             "snowshot.exe",
             "SnowShot"
         ]
-    ],
-    "checkver": "github",
-    "autoupdate": {
-        "url": "https://github.com/mg-chao/snow-shot/releases/download/$version/Snow.Shot_$version_windows-x64.exe"
-    }
+    ]
 }

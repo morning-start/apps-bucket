@@ -21,7 +21,6 @@ function New-SymlinkIfNotExists {
     param (
         [Parameter(Mandatory = $true, HelpMessage = "要创建的符号链接路径")]
         [string]$SymlinkPath,
-        
         [Parameter(Mandatory = $true, HelpMessage = "符号链接指向的目标路径")]
         [string]$TargetPath
     )
