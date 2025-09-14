@@ -15,18 +15,16 @@
             "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-arm64.7z\" \"$dir\""
         }
     },
-    "persist": "data",
+    "persist": ["data", "home"],
     "post_install": [
+        "$data_dir = Join-Path $env:HOME \".cherrystudio\"",
+        "$persist_home_dir = Join-Path $persist_dir home",
+        "& \"$bucketsdir\\$bucket\\scripts\\link.ps1\" $data_dir $persist_home_dir",
         "$appdata_dir = Join-Path $env:APPDATA \"CherryStudio\"",
         "$persist_data_dir = Join-Path $persist_dir data",
         "& \"$bucketsdir\\$bucket\\scripts\\link.ps1\" $appdata_dir $persist_data_dir"
     ],
-    "shortcuts": [
-        [
-            "Cherry Studio.exe",
-            "Cherry Studio"
-        ]
-    ],
+    "shortcuts": [["Cherry Studio.exe", "Cherry Studio"]],
     "checkver": {
         "github": "https://github.com/CherryHQ/cherry-studio"
     },
