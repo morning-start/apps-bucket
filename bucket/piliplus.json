@@ -4,6 +4,7 @@
     "homepage": "https://github.com/mg-chao/snow-shot",
     "license": "GPL-3.0",
     "url": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/1.1.4.5/windows-release.zip",
+    "extract_dir": "PiliPlus-Win",
     "hash": "478fa7fa40872e40f931d61364d0f7dd8e1b49ca0af95a9f8fd5dec0c31467dc",
     "checkver": "github",
     "autoupdate": {
