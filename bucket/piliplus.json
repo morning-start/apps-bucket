@@ -1,0 +1,18 @@
+{
+    "version": "1.1.4.5",
+    "description": "Snow Shot 是一款功能完备，纯粹社区驱动的工具软件",
+    "homepage": "https://github.com/mg-chao/snow-shot",
+    "license": "GPL-3.0",
+    "url": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/1.1.4.5/windows-release.zip",
+    "hash": "478fa7fa40872e40f931d61364d0f7dd8e1b49ca0af95a9f8fd5dec0c31467dc",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/$version/windows-release.zip"
+    },
+    "shortcuts": [
+        [
+            "piliplus.exe",
+            "PiliPlus"
+        ]
+    ]
+}
