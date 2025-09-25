@@ -1,0 +1,18 @@
+{
+    "version": "0.3.1",
+    "description": "Snow Shot 是一款功能完备，纯粹社区驱动的工具软件",
+    "homepage": "https://github.com/mg-chao/snow-shot",
+    "license": "GPL-3.0",
+    "url": "https://github.com/iKineticate/BlueGauge/releases/download/0.3.1/BlueGauge-0.3.1-x86_64.zip",
+    "hash": "c31ef551e758b07c9ad9cff3b308730a2ce2bbcff5feee31c3097dd70279eed2",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/iKineticate/BlueGauge/releases/download/$version/BlueGauge-$version-x86_64.zip"
+    },
+    "shortcuts": [
+        [
+            "snowshot.exe",
+            "SnowShot"
+        ]
+    ]
+}
