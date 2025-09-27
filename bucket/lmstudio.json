@@ -30,14 +30,14 @@
             }
         }
     },
+    "extract_dir": "$PLUGINSDIR",
+    "shortcuts": [["LM Studio.exe", "LM Studio"]],
     "post_install": [
         "$cache_dir = Join-Path $env:USERPROFILE \".cache\\lm-studio\"",
         "$persist_cache_dir = Join-Path $persist_dir cache",
-        "& \"$bucketsdir\\$bucket\\scripts\\link.ps1\" $cache_dir $persist_home_dir"
+        "& \"$bucketsdir\\$bucket\\scripts\\link.ps1\" $cache_dir $persist_cache_dir"
     ],
     "persist": ["cache"],
-    "extract_dir": "$PLUGINSDIR",
-    "shortcuts": [["LM Studio.exe", "LM Studio"]],
     "checkver": {
         "regex": "LM-Studio-([\\d.-]+)-x64.exe"
     },
