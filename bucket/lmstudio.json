@@ -33,7 +33,7 @@
     "post_install": [
         "$cache_dir = Join-Path $env:USERPROFILE \".cache\\lm-studio\"",
         "$persist_cache_dir = Join-Path $persist_dir cache",
-        "& \"$bucketsdir\\$bucket\\scripts\\link.ps1\" $data_dir $persist_home_dir"
+        "& \"$bucketsdir\\$bucket\\scripts\\link.ps1\" $cache_dir $persist_home_dir"
     ],
     "persist": ["cache"],
     "extract_dir": "$PLUGINSDIR",
