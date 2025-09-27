@@ -6,7 +6,7 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.1/Cherry-Studio-1.6.1-x64-setup.exe#/dl.7z",
-            "hash": "sha512:3029fa1cc92d650f49fe1f5df22de4dee2419898e72879ad8bf38dfe731435d5dae3f7dd71d7c771dec4b179fef45cdc3cc803d2f3fffcbdf75dbbffd9266c70",
+            "hash": "5d564690dbb8d55f0447eeccd505bafcfb5449380aac8905c6736f66b7c284b0",
             "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\""
         },
         "arm64": {
@@ -39,11 +39,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/CherryHQ/cherry-studio/releases/download/v$version/Cherry-Studio-$version-x64-setup.exe#/dl.7z",
-                "hash": {
-                    "url": "$baseurl/latest.yml",
-                    "regex": "sha512: $base64"
-                }
+                "url": "https://github.com/CherryHQ/cherry-studio/releases/download/v$version/Cherry-Studio-$version-x64-setup.exe#/dl.7z"
             },
             "arm64": {
                 "url": "https://github.com/CherryHQ/cherry-studio/releases/download/v$version/Cherry-Studio-$version-arm64-setup.exe#/dl.7z"
