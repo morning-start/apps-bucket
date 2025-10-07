@@ -1,11 +1,18 @@
 {
     "version": "2.4.0",
-    "homepage": "https://github.com/shiyi-0x7f/o-lib",
+    "homepage": "https://gitee.com/morning-start/o-lib",
     "license": "GPL-3.0-only",
-    "url": "https://ecs-152-136-103-177.compute.hwclouds-dns.com/data/Olib2.4.0.exe",
+    "url": "https://gitee.com/morning-start/o-lib/releases/download/v2.4.0/Olib2.4.0.exe",
     "hash": "468EEE9AAD35BD90C936AE48D357FD740832E4676EC71152BEB6AEA02FAE0A69",
     "shortcuts": [["Olib2.4.0.exe", "Olib"]],
     "persist": ["config", "cache", "book"],
+    "checkver": {
+        "url": "https://gitee.com/morning-start/o-lib/releases/",
+        "re": "v(?<version>\\d+\\.\\d+\\.\\d+)"
+    },
+    "autoupdate": {
+        "url": "https://gitee.com/morning-start/o-lib/releases/download/$version/Olib$version.exe"
+    },
     "post_install": [
         "$configFilePath = \"$persist_dir\\config\\config.json\"",
         "if (-not (Test-Path -Path $configFilePath)) {",
