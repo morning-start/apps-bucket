@@ -69,11 +69,16 @@ function New-SymlinkIfNotExists {
             New-Item -ItemType SymbolicLink -Path $SymlinkPath -Target $TargetPath -Force -ErrorAction Stop | Out-Null
             Write-Verbose "已成功创建符号链接: $SymlinkPath -> $TargetPath"
         }
-    }
-    catch {
+    } catch {
         Write-Error "操作失败: $_"
         throw  # 重新抛出异常以便上层处理
     }
+}
+
+# 安全调用
+if ($args.Count -lt 2) {
+    Write-Error "用法: link.ps1 <SymlinkPath> <TargetPath>"
+    exit 1
 }
 
 New-SymlinkIfNotExists $args[0] $args[1]
