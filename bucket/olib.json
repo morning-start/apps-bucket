@@ -8,7 +8,8 @@
     "persist": ["config", "cache", "book"],
     "checkver": {
         "url": "https://gitee.com/api/v5/repos/morning-start/o-lib/releases/latest",
-        "jsonpath": "$.tag_name"
+        "jp": "$.tag_name",
+        "re": "v([\\d.]+)"
     },
     "autoupdate": {
         "url": "https://gitee.com/morning-start/o-lib/releases/download/v$version/Olib$version.zip",
