@@ -12,9 +12,9 @@
         "jsonpath": "$.tag_name"
     },
     "autoupdate": {
-        "url": "https://gitee.com/morning-start/o-lib/releases/download/v${version}/Olib${version}.zip",
+        "url": "https://gitee.com/morning-start/o-lib/releases/download/v$version/Olib$version.zip",
         "hash": {
-            "url": "https://gitee.com/morning-start/o-lib/releases/download/v${version}/Olib${version}.sha256"
+            "url": "https://gitee.com/morning-start/o-lib/releases/download/v$version/Olib$version.sha256"
         }
     },
     "post_install": [
