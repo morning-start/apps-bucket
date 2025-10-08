@@ -3,7 +3,7 @@
     "homepage": "https://gitee.com/morning-start/o-lib",
     "license": "GPL-3.0-only",
     "url": "https://gitee.com/morning-start/o-lib/releases/download/v2.4.0/Olib2.4.0.zip",
-    "hash": "468EEE9AAD35BD90C936AE48D357FD740832E4676EC71152BEB6AEA02FAE0A69",
+    "hash": "52515344c6fa0981a1f68eb595a2e9101ab626b30b5939b87eaae844a24452fb",
     "extract_dir": "Olib",
     "shortcuts": [["Olib.exe", "Olib"]],
     "persist": ["config", "cache", "book"],
