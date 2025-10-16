@@ -9,10 +9,10 @@
     "autoupdate": {
         "url": "https://github.com/mg-chao/snow-shot/releases/download/$version/Snow.Shot_$version_windows-x64.exe"
     },
-    "shortcuts": [
-        [
-            "snowshot.exe",
-            "SnowShot"
-        ]
-    ]
+    "persist": ["configs"],
+    "post_install": [
+        "$app_data= Join-Path $env:APPDATA \"com.chao.snowshot\"",
+        "& \"$bucketsdir\\$bucket\\scripts\\link.ps1\" $app_data $persist_dir"
+    ],
+    "shortcuts": [["snowshot.exe", "SnowShot"]]
 }
