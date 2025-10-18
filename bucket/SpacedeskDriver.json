@@ -6,7 +6,7 @@
   "architecture": {
     "64bit": {
       "url": "https://www.spacedesk.net/downloadidd64#/setup.msi_",
-      "hash": "ea581c00eb93dd9d7909f9c73d346b0cd42e2d4ec7943a8a0f63fac4218e0e73"
+      "hash": "128843e512be16ba1b2592436b59e794326b779d0188ccd89114c02096e4f14c"
     },
     "32bit": {
       "url": "https://downloads.spacedesk.net/downloads/spacedesk_driver_Win_10_32_v2208.msi#/setup.msi_",
