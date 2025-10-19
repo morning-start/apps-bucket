@@ -5,7 +5,7 @@
     "license": "GNU",
     "url": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/1.1.4.13/PiliPlus_windows_1.1.4+4266_x64.zip",
     "extract_dir": "PiliPlus-Win",
-    "hash": "6bbb2e689bdfaa2abb439e6211e78ea91ffa49a3c0d2adb8d7d5d170a8030844",
+    "hash": "f04be4cab7d6de668027a514ad561d674c5ae17d692d8e98fbff5f2924d67dd9",
     "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/$version/windows-release.zip"
