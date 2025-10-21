@@ -1,10 +1,10 @@
 {
-    "version": "0.5.8-beta",
+    "version": "0.5.9-beta",
     "description": "Snow Shot 是一款功能完备，纯粹社区驱动的工具软件",
     "homepage": "https://github.com/mg-chao/snow-shot",
     "license": "GPL-3.0",
-    "url": "https://github.com/mg-chao/snow-shot/releases/download/0.5.8-beta/Snow.Shot_0.5.8-beta_windows-x64.exe#/dl.7z",
-    "hash": "562a6c17d412144973930b753844a83db6064513d601d0d4e4afef58e19766f6",
+    "url": "https://github.com/mg-chao/snow-shot/releases/download/0.5.9-beta/Snow.Shot_0.5.9-beta_windows-x64.exe",
+    "hash": "2a99ff558edec458b553bbf8138422d74626b967fc21d0519390a827472547e6",
     "checkver": {
         "url": "https://api.github.com/repos/mg-chao/snow-shot/releases/latest",
         "jp": "$.tag_name"
@@ -12,10 +12,15 @@
     "autoupdate": {
         "url": "https://github.com/mg-chao/snow-shot/releases/download/$version/Snow.Shot_$version_windows-x64.exe"
     },
-    "persist": ["configs"],
+    "persist": "configs",
     "post_install": [
         "$app_data= Join-Path $env:APPDATA \"com.chao.snowshot\"",
         "& \"$bucketsdir\\$bucket\\scripts\\link.ps1\" $app_data $persist_dir"
     ],
-    "shortcuts": [["snowshot.exe", "SnowShot"]]
+    "shortcuts": [
+        [
+            "snowshot.exe",
+            "SnowShot"
+        ]
+    ]
 }
