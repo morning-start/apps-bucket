@@ -1,8 +1,8 @@
 # Apps Bucket for Scoop
 
-[![Tests](https://github.com/morning-start/apps-bucket/actions/workflows/ci.yml/badge.svg)](https://github.com/morning-start/apps-bucket/actions/workflows/ci.yml) [![Excavator](https://github.com/morning-start/apps-bucket/actions/workflows/excavator.yml/badge.svg)](https://github.com/morning-start/apps-bucket/actions/workflows/excavator.yml)
-
 这是一个专为日常使用设计的[Scoop](https://scoop.sh/)仓库，预配置了各种应用程序。所有设置都开箱即用，无需手动配置。
+
+> 北京时间 8-24点 每两小时更新一次
 
 ## ✅ 支持的应用程序
 
