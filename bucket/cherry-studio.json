@@ -5,20 +5,15 @@
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.5/Cherry-Studio-1.6.5-x64-setup.exe",
-            "hash": "f8a4e724e65d5e22b39b75ee732c13dee34a34f9a2151f449eda92b48530203b",
-            "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\""
+            "url": "https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.5/Cherry-Studio-1.6.5-x64-setup.exe#/dl.7z",
+            "hash": "f8a4e724e65d5e22b39b75ee732c13dee34a34f9a2151f449eda92b48530203b"
         },
         "arm64": {
-            "url": "https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.5/Cherry-Studio-1.6.5-arm64-setup.exe",
-            "hash": "ca45381e077348a76061c3f9e468d0455bda9821bc2b7acabae9a65ad7c40f97",
-            "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-arm64.7z\" \"$dir\""
+            "url": "https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.5/Cherry-Studio-1.6.5-arm64-setup.exe#/dl.7z",
+            "hash": "ca45381e077348a76061c3f9e468d0455bda9821bc2b7acabae9a65ad7c40f97"
         }
     },
-    "persist": [
-        "data",
-        "home"
-    ],
+    "persist": ["data", "home"],
     "post_install": [
         "$data_dir = Join-Path $env:USERPROFILE \".cherrystudio\"",
         "$persist_home_dir = Join-Path $persist_dir home",
@@ -27,22 +22,15 @@
         "$persist_data_dir = Join-Path $persist_dir data",
         "& \"$bucketsdir\\$bucket\\scripts\\link.ps1\" $appdata_dir $persist_data_dir"
     ],
-    "shortcuts": [
-        [
-            "Cherry Studio.exe",
-            "Cherry Studio"
-        ]
-    ],
-    "checkver": {
-        "github": "https://github.com/CherryHQ/cherry-studio"
-    },
+    "shortcuts": [["Cherry Studio.exe", "Cherry Studio"]],
+    "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/CherryHQ/cherry-studio/releases/download/v$version/Cherry-Studio-$version-x64-setup.exe"
+                "url": "https://github.com/CherryHQ/cherry-studio/releases/download/v$version/Cherry-Studio-$version-x64-setup.exe#/dl.7z"
             },
             "arm64": {
-                "url": "https://github.com/CherryHQ/cherry-studio/releases/download/v$version/Cherry-Studio-$version-arm64-setup.exe"
+                "url": "https://github.com/CherryHQ/cherry-studio/releases/download/v$version/Cherry-Studio-$version-arm64-setup.exe#/dl.7z"
             }
         }
     }
