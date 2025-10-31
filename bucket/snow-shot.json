@@ -1,10 +1,10 @@
 {
-    "version": "0.7.0-beta",
+    "version": "0.7.1-beta",
     "description": "Snow Shot 是一款功能完备，纯粹社区驱动的工具软件",
     "homepage": "https://github.com/mg-chao/snow-shot",
     "license": "GPL-3.0",
-    "url": "https://github.com/mg-chao/snow-shot/releases/download/0.7.0-beta/Snow.Shot_0.7.0-beta_windows-x64.exe#/dl.7z",
-    "hash": "238f14d7ce88bc53642e4e9e38979aad1777564c951c05e86d0b7ea972257e7f",
+    "url": "https://github.com/mg-chao/snow-shot/releases/download/0.7.1-beta/Snow.Shot_0.7.1-beta_windows-x64.exe#/dl.7z",
+    "hash": "22941021416faffbf4243eb298c6b7a4af41f76203e0b40dfaaedf74f0123747",
     "checkver": {
         "url": "https://api.github.com/repos/mg-chao/snow-shot/releases/latest",
         "jp": "$.tag_name"
