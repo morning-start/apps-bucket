@@ -6,11 +6,13 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.6/Cherry-Studio-1.6.6-x64-setup.exe#/dl.7z",
-            "hash": "aba17ee7b91f1acf00457988d47048488af3f138580b56010f832311838a0aed"
+            "hash": "aba17ee7b91f1acf00457988d47048488af3f138580b56010f832311838a0aed",
+            "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\""
         },
         "arm64": {
             "url": "https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.6/Cherry-Studio-1.6.6-arm64-setup.exe#/dl.7z",
-            "hash": "2091399036dacca258540bec4eac5fc05201598e42328060c86f9abfdf9149b3"
+            "hash": "2091399036dacca258540bec4eac5fc05201598e42328060c86f9abfdf9149b3",
+            "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-arm64.7z\" \"$dir\""
         }
     },
     "shortcuts": [["Cherry Studio.exe", "Cherry Studio"]],
@@ -23,9 +25,7 @@
         "$persist_data_dir = Join-Path $persist_dir data",
         "& \"$bucketsdir\\$bucket\\scripts\\link.ps1\" $appdata_dir $persist_data_dir"
     ],
-    "checkver": {
-        "github": "https://github.com/CherryHQ/cherry-studio"
-    },
+    "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {
