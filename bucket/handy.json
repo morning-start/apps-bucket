@@ -12,6 +12,11 @@
     "installer": {
         "script": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\Uninstall*.exe\" -Force -Recurse"
     },
+    "post_install": [
+        "$app_data= Join-Path $env:APPDATA \"com.pais.handy\"",
+        "& \"$bucketsdir\\$bucket\\scripts\\link.ps1\" $app_data $persist_dir"
+    ],
+    "persist": ["models"],
     "shortcuts": [["handy.exe", "Handy"]],
     "checkver": "github",
     "autoupdate": {
