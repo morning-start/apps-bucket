@@ -4,18 +4,14 @@
     "homepage": "https://www.parallelchat.top/",
     "license": "Freeware",
     "url": "https://update.parallelchat.top/ParallelChat%20Setup%201.0.9.exe#/dl.7z",
+    "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
     "hash": "c6b54d78b0ef67ac8c187bd3e7723ef4e170b83e635c49e0e67472b514aa73dc",
-    "checkver":{
+    "checkver": {
         "url": "https://update.parallelchat.top/",
         "regex": "https://update.parallelchat.top/ParallelChat%20Setup%20(\\d+\\.\\d+\\.\\d+).exe"
     },
     "autoupdate": {
         "url": "https://update.parallelchat.top/ParallelChat%20Setup%20$version.exe#/dl.7z"
     },
-    "shortcuts": [
-        [
-            "ParallelChat.exe",
-            "ParallelChat"
-        ]
-    ]
+    "shortcuts": [["ParallelChat.exe", "ParallelChat"]]
 }
