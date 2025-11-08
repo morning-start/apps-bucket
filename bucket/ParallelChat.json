@@ -1,0 +1,21 @@
+{
+    "version": "1.0.9",
+    "description": "一次提问，多个AI同时作答。不止一个答案，不止一种可能。",
+    "homepage": "https://www.parallelchat.top/",
+    "license": "Freeware",
+    "url": "https://update.parallelchat.top/ParallelChat%20Setup%201.0.9.exe#/dl.7z",
+    "hash": "ff83cf2a67532fc6e2ac3498f7df67a25894cd197066eb38ba36b2f99292a9b2",
+    "checkver":{
+        "url": "https://update.parallelchat.top/",
+        "regex": "https://update.parallelchat.top/ParallelChat%20Setup%20(\\d+\\.\\d+\\.\\d+).exe"
+    },
+    "autoupdate": {
+        "url": "https://update.parallelchat.top/ParallelChat%20Setup%20$version.exe#/dl.7z"
+    },
+    "shortcuts": [
+        [
+            "ParallelChat.exe",
+            "ParallelChat"
+        ]
+    ]
+}
