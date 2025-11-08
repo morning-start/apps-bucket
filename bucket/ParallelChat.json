@@ -4,7 +4,7 @@
     "homepage": "https://www.parallelchat.top/",
     "license": "Freeware",
     "url": "https://update.parallelchat.top/ParallelChat%20Setup%201.0.9.exe#/dl.7z",
-    "hash": "ff83cf2a67532fc6e2ac3498f7df67a25894cd197066eb38ba36b2f99292a9b2",
+    "hash": "c6b54d78b0ef67ac8c187bd3e7723ef4e170b83e635c49e0e67472b514aa73dc",
     "checkver":{
         "url": "https://update.parallelchat.top/",
         "regex": "https://update.parallelchat.top/ParallelChat%20Setup%20(\\d+\\.\\d+\\.\\d+).exe"
