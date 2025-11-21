@@ -4,15 +4,17 @@
     "homepage": "https://github.com/morning-start",
     "persist": ["edgeData", "chromeData"],
     "license": "MIT",
-    "url":"https://raw.githubusercontent.com/morning-start/apps-bucket/refs/heads/master/scripts/link.ps1",
+    "url": "https://raw.githubusercontent.com/morning-start/apps-bucket/refs/heads/master/scripts/link.ps1",
     "post_install": [
         "$localAppdata = Join-Path $env:USERPROFILE \"AppData\\Local\"",
         "$originPath = Join-Path $localAppdata \"Microsoft\\Edge\\User Data\"",
-        "$tagretPath = Join-Path $persist_dir \"edgeData\"",
-        "& \"$bucketsdir\\$bucket\\scripts\\link.ps1\" $originPath $tagretPath",
+        "$targetPath = Join-Path $persist_dir \"edgeData\"",
+        "& \"$bucketsdir\\$bucket\\scripts\\link.ps1\" $originPath $targetPath",
         "$originPath = Join-Path $localAppdata \"Google\\Chrome\\User Data\"",
-        "$tagretPath = Join-Path $persist_dir \"chromeData\"",
-        "& \"$bucketsdir\\$bucket\\scripts\\link.ps1\" $originPath $tagretPath"
+        "$targetPath = Join-Path $persist_dir \"chromeData\"",
+        "& \"$bucketsdir\\$bucket\\scripts\\link.ps1\" $originPath $targetPath",
+        "$originPath = Join-Path $localAppdata \"Doubao\"",
+        "$targetPath = Join-Path $persist_dir \"doubaoData\"",
+        "& \"$bucketsdir\\$bucket\\scripts\\link.ps1\" $originPath $targetPath"
     ]
 }
-
