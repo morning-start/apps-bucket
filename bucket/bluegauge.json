@@ -1,10 +1,10 @@
 {
-    "version": "0.3.4",
+    "version": "0.3.5",
     "description": "一款轻便的托盘工具，可轻松查看蓝牙设备的电池电量。",
     "homepage": "https://github.com/iKineticate/BlueGauge",
     "license": "MIT",
-    "url": "https://github.com/iKineticate/BlueGauge/releases/download/0.3.4/BlueGauge-0.3.4-x86_64.zip",
-    "hash": "bc7a74c5576f97b0e9924b5aa88c9eebcfd6a19275a8d6ac7b0d6944b0475546",
+    "url": "https://github.com/iKineticate/BlueGauge/releases/download/0.3.5/BlueGauge-0.3.5-x86_64.zip",
+    "hash": "86f87ab6d7ec555d8008fb08d461edb9d03b6fdffac14dfb139db8fe1ead3937",
     "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/iKineticate/BlueGauge/releases/download/$version/BlueGauge-$version-x86_64.zip"
