@@ -1,9 +1,9 @@
 {
-    "version": "2.4.2",
+    "version": "2.4.4",
     "homepage": "https://gitee.com/morning-start/o-lib",
     "license": "GPL-3.0-only",
-    "url": "https://gitee.com/morning-start/o-lib/releases/download/v2.4.2/Olib2.4.2.zip",
-    "hash": "eed6db04a92fd0b93d77d2ea3b5532a3d49bc4f71dce7d16570acb4372d3a861",
+    "url": "https://gitee.com/morning-start/o-lib/releases/download/v2.4.4/Olib2.4.4.zip",
+    "hash": "3b6e3da30f9b55e981da23d1ce5a68e2cf11f12bab84dbbcf0347d436466d8ca",
     "shortcuts": [
         [
             "Olib.exe",
