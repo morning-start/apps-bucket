@@ -18,15 +18,11 @@
         [
             "firefox.exe",
             "firefox-dev"
-        ],
-        [
-            "firefox.exe",
-            "firefox-developer"
         ]
     ],
     "shortcuts": [
         [
-            "firefox.exe",
+            "firefox.exe -P \"Scoop-Dev\" -no-remote",
             "Firefox Dev"
         ],
         [
