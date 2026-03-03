@@ -22,7 +22,7 @@
     ],
     "shortcuts": [
         [
-            "firefox.exe -P \"Scoop-Dev\" -no-remote",
+            "firefox.exe -P Scoop-Dev -no-remote",
             "Firefox Dev"
         ],
         [
