@@ -2,19 +2,26 @@
     "version": "1.2.0",
     "description": "User Data directory for Edge and Chrome",
     "homepage": "https://github.com/morning-start",
-    "persist": ["edgeData", "chromeData"],
+    "persist": [
+        "edgeData",
+        "chromeData",
+        "doubaoData",
+        "TabbitData"
+    ],
     "license": "MIT",
     "url": "https://raw.githubusercontent.com/morning-start/apps-bucket/refs/heads/master/scripts/link.ps1",
     "post_install": [
         "$localAppdata = Join-Path $env:USERPROFILE \"AppData\\Local\"",
-        "$originPath = Join-Path $localAppdata \"Microsoft\\Edge\\User Data\"",
-        "$targetPath = Join-Path $persist_dir \"edgeData\"",
-        "& \"$bucketsdir\\$bucket\\scripts\\link.ps1\" $originPath $targetPath",
-        "$originPath = Join-Path $localAppdata \"Google\\Chrome\\User Data\"",
-        "$targetPath = Join-Path $persist_dir \"chromeData\"",
-        "& \"$bucketsdir\\$bucket\\scripts\\link.ps1\" $originPath $targetPath",
-        "$originPath = Join-Path $localAppdata \"Doubao\"",
-        "$targetPath = Join-Path $persist_dir \"doubaoData\"",
-        "& \"$bucketsdir\\$bucket\\scripts\\link.ps1\" $originPath $targetPath"
+        "$browsers = @(",
+        "    @('Microsoft\\Edge', 'edgeData'),",
+        "    @('Google\\Chrome', 'chromeData'),",
+        "    @('Doubao', 'doubaoData'),",
+        "    @('Tabbit Browser', 'TabbitData')",
+        ")",
+        "for ($i = 0; $i -lt $browsers.Length; $i++) {",
+        "    $originPath = Join-Path $localAppdata $browsers[$i][0] \"User Data\"",
+        "    $targetPath = Join-Path $persist_dir $browsers[$i][1]",
+        "    & \"$bucketsdir\\$bucket\\scripts\\link.ps1\" $originPath $targetPath",
+        "}"
     ]
 }
