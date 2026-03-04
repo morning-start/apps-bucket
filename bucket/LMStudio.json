@@ -31,10 +31,15 @@
     "post_install": [
         "$originPath = Join-Path $env:USERPROFILE \".cache\\lm-studio\"",
         "$targetPath = Join-Path $persist_dir \"lm-studio\"",
+        "& \"$bucketsdir\\$bucket\\scripts\\link.ps1\" $originPath $targetPath",
+        "$originPath = Join-Path $env:APPDATA \"LM Studio\"",
+        "$targetPath = Join-Path $persist_dir \"appdata\"",
         "& \"$bucketsdir\\$bucket\\scripts\\link.ps1\" $originPath $targetPath"
+
     ],
     "persist": [
-        "lm-studio"
+        "lm-studio",
+        "appdata"
     ],
     "extract_dir": "$PLUGINSDIR",
     "bin": "resources\\app\\.webpack\\lms.exe",
