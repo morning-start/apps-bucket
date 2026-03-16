@@ -22,7 +22,7 @@
         }
     },
     "persist": "data",
-    "bin": "siyuan.exe",
+    "bin": [["siyuan.exe", "SiYuan"]],
     "shortcuts": [
         [
             "siyuan.exe",
