@@ -30,8 +30,7 @@
     ],
     "post_uninstall": [
         "$appdata_dir = Join-Path $env:APPDATA \"uTools\"",
-        "$persist_data_dir = Join-Path $persist_dir data",
-        "& \"$bucketsdir\\$bucket\\scripts\\unlink.ps1\" $appdata_dir $persist_data_dir"
+        "& \"$bucketsdir\\$bucket\\scripts\\unlink.ps1\" $appdata_dir"
     ],
     "shortcuts": [
         [

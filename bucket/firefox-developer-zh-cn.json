@@ -46,8 +46,7 @@
     ],
     "post_uninstall": [
         "$appdata_dir = Join-Path $env:APPDATA \"\\Mozilla\\Firefox\\Profiles\\developer\"",
-        "$persist_data_dir = Join-Path $persist_dir profile",
-        "& \"$bucketsdir\\$bucket\\scripts\\unlink.ps1\" $appdata_dir $persist_data_dir"
+        "& \"$bucketsdir\\$bucket\\scripts\\unlink.ps1\" $appdata_dir"
     ],
     "checkver": {
         "url": "https://aus5.mozilla.org/update/6/Firefox/93.0/_/WINNT_x86_64-msvc-x64/zh-CN/aurora/_/_/_/_/update.xml",

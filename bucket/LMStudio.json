@@ -38,11 +38,9 @@
     ],
     "post_uninstall": [
         "$originPath = Join-Path $env:USERPROFILE \".cache\\lm-studio\"",
-        "$targetPath = Join-Path $persist_dir \"lm-studio\"",
-        "& \"$bucketsdir\\$bucket\\scripts\\unlink.ps1\" $originPath $targetPath",
+        "& \"$bucketsdir\\$bucket\\scripts\\unlink.ps1\" $originPath",
         "$originPath = Join-Path $env:APPDATA \"LM Studio\"",
-        "$targetPath = Join-Path $persist_dir \"appdata\"",
-        "& \"$bucketsdir\\$bucket\\scripts\\unlink.ps1\" $originPath $targetPath"
+        "& \"$bucketsdir\\$bucket\\scripts\\unlink.ps1\" $originPath"
     ],
     "persist": [
         "lm-studio",

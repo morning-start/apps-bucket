@@ -39,7 +39,7 @@
     ],
     "post_uninstall": [
         "$app_data = Join-Path $env:USERPROFILE 'Zotero'",
-        "& \"$bucketsdir\\$bucket\\scripts\\unlink.ps1\" $app_data $persist_dir"
+        "& \"$bucketsdir\\$bucket\\scripts\\unlink.ps1\" $app_data"
     ],
     "pre_uninstall": [
         "if ($cmd -eq 'uninstall') {",
