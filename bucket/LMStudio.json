@@ -31,16 +31,16 @@
     "post_install": [
         "$originPath = Join-Path $env:USERPROFILE \".cache\\lm-studio\"",
         "$targetPath = Join-Path $persist_dir \"lm-studio\"",
-        "& \"$bucketsdir\\$bucket\\scripts\\link.ps1\" $originPath $targetPath",
+        "& \"$bucketsdir\\apps\\scripts\\link.ps1\" $originPath $targetPath",
         "$originPath = Join-Path $env:APPDATA \"LM Studio\"",
         "$targetPath = Join-Path $persist_dir \"appdata\"",
-        "& \"$bucketsdir\\$bucket\\scripts\\link.ps1\" $originPath $targetPath"
+        "& \"$bucketsdir\\apps\\scripts\\link.ps1\" $originPath $targetPath"
     ],
     "post_uninstall": [
         "$originPath = Join-Path $env:USERPROFILE \".cache\\lm-studio\"",
-        "& \"$bucketsdir\\$bucket\\scripts\\unlink.ps1\" $originPath",
+        "& \"$bucketsdir\\apps\\scripts\\unlink.ps1\" $originPath",
         "$originPath = Join-Path $env:APPDATA \"LM Studio\"",
-        "& \"$bucketsdir\\$bucket\\scripts\\unlink.ps1\" $originPath"
+        "& \"$bucketsdir\\apps\\scripts\\unlink.ps1\" $originPath"
     ],
     "persist": [
         "lm-studio",

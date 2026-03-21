@@ -16,11 +16,11 @@
     "persist": "configs",
     "post_install": [
         "$app_data= Join-Path $env:APPDATA \"com.chao.snowshot\"",
-        "& \"$bucketsdir\\$bucket\\scripts\\link.ps1\" $app_data $persist_dir"
+        "& \"$bucketsdir\\apps\\scripts\\link.ps1\" $app_data $persist_dir"
     ],
     "post_uninstall": [
         "$app_data= Join-Path $env:APPDATA \"com.chao.snowshot\"",
-        "& \"$bucketsdir\\$bucket\\scripts\\unlink.ps1\" $app_data"
+        "& \"$bucketsdir\\apps\\scripts\\unlink.ps1\" $app_data"
     ],
     "shortcuts": [["snowshot.exe", "SnowShot"]]
 }

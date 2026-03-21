@@ -4,7 +4,7 @@
     "homepage": "https://onecommander.com/",
     "notes": [
         "activate OneCommander",
-        "$bucketsdir\\$bucket\\scripts\\onecommander\\Keygen.exe"
+        "$bucketsdir\\apps-bucket\\scripts\\onecommander\\Keygen.exe"
     ],
     "license": {
         "identifier": "Freeware",
