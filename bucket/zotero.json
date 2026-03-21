@@ -34,8 +34,12 @@
         "    if ($global) { $content = $content.Replace('HKCU', 'HKLM') }",
         "    Set-Content \"$dir\\$($_.Name)\" $content -Encoding 'utf8' -Force",
         "}",
-        "$app_data = 'C:\\Users\\Lucifer\\Zotero'",
+        "$app_data = Join-Path $env:USERPROFILE 'Zotero'",
         "& \"$bucketsdir\\$bucket\\scripts\\link.ps1\" $app_data $persist_dir"
+    ],
+    "post_uninstall": [
+        "$app_data = Join-Path $env:USERPROFILE 'Zotero'",
+        "& \"$bucketsdir\\$bucket\\scripts\\unlink.ps1\" $app_data $persist_dir"
     ],
     "pre_uninstall": [
         "if ($cmd -eq 'uninstall') {",

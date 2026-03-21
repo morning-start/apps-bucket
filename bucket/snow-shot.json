@@ -18,5 +18,9 @@
         "$app_data= Join-Path $env:APPDATA \"com.chao.snowshot\"",
         "& \"$bucketsdir\\$bucket\\scripts\\link.ps1\" $app_data $persist_dir"
     ],
+    "post_uninstall": [
+        "$app_data= Join-Path $env:APPDATA \"com.chao.snowshot\"",
+        "& \"$bucketsdir\\$bucket\\scripts\\unlink.ps1\" $app_data $persist_dir"
+    ],
     "shortcuts": [["snowshot.exe", "SnowShot"]]
 }

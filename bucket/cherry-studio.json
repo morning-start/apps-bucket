@@ -15,8 +15,16 @@
             "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-arm64.7z\" \"$dir\""
         }
     },
-    "shortcuts": [["Cherry Studio.exe", "Cherry Studio"]],
-    "persist": ["data", "home"],
+    "shortcuts": [
+        [
+            "Cherry Studio.exe",
+            "Cherry Studio"
+        ]
+    ],
+    "persist": [
+        "data",
+        "home"
+    ],
     "post_install": [
         "$data_dir = Join-Path $env:USERPROFILE \".cherrystudio\"",
         "$persist_home_dir = Join-Path $persist_dir home",
@@ -26,6 +34,14 @@
         "& \"$bucketsdir\\$bucket\\scripts\\link.ps1\" $appdata_dir $persist_data_dir"
     ],
     "checkver": "github",
+    "post_uninstall": [
+        "$data_dir = Join-Path $env:USERPROFILE \".cherrystudio\"",
+        "$persist_home_dir = Join-Path $persist_dir home",
+        "& \"$bucketsdir\\$bucket\\scripts\\unlink.ps1\" $data_dir $persist_home_dir",
+        "$appdata_dir = Join-Path $env:APPDATA \"CherryStudio\"",
+        "$persist_data_dir = Join-Path $persist_dir data",
+        "& \"$bucketsdir\\$bucket\\scripts\\unlink.ps1\" $appdata_dir $persist_data_dir"
+    ],
     "autoupdate": {
         "architecture": {
             "64bit": {

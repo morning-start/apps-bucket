@@ -22,5 +22,18 @@
         "    $targetPath = Join-Path $persist_dir $browsers[$i][1]",
         "    & \"$bucketsdir\\$bucket\\scripts\\link.ps1\" $originPath $targetPath",
         "}"
+    ],
+    "post_uninstall": [
+        "$browsers = @(",
+        "    @('Microsoft\\Edge', 'edgeData'),",
+        "    @('Google\\Chrome', 'chromeData'),",
+        "    @('Doubao', 'doubaoData'),",
+        "    @('Tabbit Browser', 'TabbitData')",
+        ")",
+        "for ($i = 0; $i -lt $browsers.Length; $i++) {",
+        "    $originPath = Join-Path $env:LOCALAPPDATA $browsers[$i][0] \"User Data\"",
+        "    $targetPath = Join-Path $persist_dir $browsers[$i][1]",
+        "    & \"$bucketsdir\\$bucket\\scripts\\unlink.ps1\" $originPath $targetPath",
+        "}"
     ]
 }
