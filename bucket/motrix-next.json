@@ -1,0 +1,48 @@
+{
+    "version": "3.6.9",
+    "description": "A full-featured download manager (Motrix Next - Community Edition)",
+    "homepage": "https://github.com/AnInsomniacy/motrix-next",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/AnInsomniacy/motrix-next/releases/download/v3.6.9/MotrixNext_3.6.9_x64-setup.exe#/dl.7z",
+            "hash": "61e49765da94e8a02f28f79cf526f9bcdb8fbaf3b7fc19a3dfa93a806712a91d"
+        }
+    },
+    "installer": {
+        "script": [
+            "Remove-Item \"$dir\\*\" -Exclude '*.7z' -Recurse -ErrorAction SilentlyContinue",
+            "Expand-7zipArchive \"$dir\\*.7z\" \"$dir\"",
+            "Remove-Item \"$dir\\*.7z\" -Force"
+        ]
+    },
+
+    "shortcuts": [
+        [
+            "Motrix Next.exe",
+            "Motrix Next"
+        ]
+    ],
+    "persist": [
+        "config"
+    ],
+    "post_install": [
+        "$appdata_dir = Join-Path $env:APPDATA 'Motrix Next'",
+        "$persist_config_dir = Join-Path $persist_dir config",
+        "& \"$bucketsdir\\apps\\scripts\\link.ps1\" $appdata_dir $persist_config_dir"
+    ],
+    "post_uninstall": [
+        "$appdata_dir = Join-Path $env:APPDATA 'Motrix Next'",
+        "& \"$bucketsdir\\apps\\scripts\\unlink.ps1\" $appdata_dir"
+    ],
+    "checkver": {
+        "github": "https://github.com/AnInsomniacy/motrix-next"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/AnInsomniacy/motrix-next/releases/download/v$version/MotrixNext_$version_x64-setup.exe#/dl.7z"
+            }
+        }
+    }
+}
