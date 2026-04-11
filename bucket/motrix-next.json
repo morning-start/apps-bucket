@@ -10,30 +10,17 @@
         }
     },
     "installer": {
-        "script": [
-            "Remove-Item \"$dir\\*\" -Exclude '*.7z' -Recurse -ErrorAction SilentlyContinue",
-            "Expand-7zipArchive \"$dir\\*.7z\" \"$dir\"",
-            "Remove-Item \"$dir\\*.7z\" -Force"
-        ]
+        "script": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\Uninstall*.exe\", \"$dir\\binaries\" -Force -Recurse -ErrorAction SilentlyContinue"
     },
 
     "shortcuts": [
         [
-            "Motrix Next.exe",
+            "motrix-next.exe",
             "Motrix Next"
         ]
     ],
     "persist": [
         "config"
-    ],
-    "post_install": [
-        "$appdata_dir = Join-Path $env:APPDATA 'Motrix Next'",
-        "$persist_config_dir = Join-Path $persist_dir config",
-        "& \"$bucketsdir\\apps\\scripts\\link.ps1\" $appdata_dir $persist_config_dir"
-    ],
-    "post_uninstall": [
-        "$appdata_dir = Join-Path $env:APPDATA 'Motrix Next'",
-        "& \"$bucketsdir\\apps\\scripts\\unlink.ps1\" $appdata_dir"
     ],
     "checkver": {
         "github": "https://github.com/AnInsomniacy/motrix-next"
