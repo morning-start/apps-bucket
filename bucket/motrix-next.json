@@ -1,27 +1,24 @@
 {
-    "version": "3.6.9",
+    "version": "3.6.10",
     "description": "A full-featured download manager (Motrix Next - Community Edition)",
     "homepage": "https://github.com/AnInsomniacy/motrix-next",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/AnInsomniacy/motrix-next/releases/download/v3.6.9/MotrixNext_3.6.9_x64-setup.exe#/dl.7z",
-            "hash": "61e49765da94e8a02f28f79cf526f9bcdb8fbaf3b7fc19a3dfa93a806712a91d"
+            "url": "https://github.com/AnInsomniacy/motrix-next/releases/download/v3.6.10/MotrixNext_3.6.10_x64-setup.exe#/dl.7z",
+            "hash": "5995a90b78597ae1f9f8ce69a2ea72aad46ed67a83a05e0e36c11d4a913e55ff"
         }
     },
     "installer": {
         "script": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\Uninstall*.exe\", \"$dir\\binaries\" -Force -Recurse -ErrorAction SilentlyContinue"
     },
-
     "shortcuts": [
         [
             "motrix-next.exe",
             "Motrix Next"
         ]
     ],
-    "persist": [
-        "config"
-    ],
+    "persist": "config",
     "checkver": {
         "github": "https://github.com/AnInsomniacy/motrix-next"
     },
