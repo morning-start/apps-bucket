@@ -1,0 +1,18 @@
+{
+    "version": "0.2.13",
+    "description": "AnyChat 是一个聚合了多个 AI 聊天服务的桌面应用，旨在提供统一入口与低占用的桌面端体验。它让你能在一个窗口中无缝切换不同的 AI 服务，专注于高性能、轻量化的日常使用。",
+    "homepage": "https://github.com/JS-banana/anychat",
+    "license": "MIT",
+    "url": "https://github.com/JS-banana/anychat/releases/download/v0.2.13/AnyChat_0.2.13_x64-setup.exe#/dl.7z",
+    "hash": "sha256:6be2dc2c3af830fb241a68cebccb02ed758390890997a8a991cef35c51151cb7",
+    "shortcuts": [
+        [
+            "AnyChat.exe",
+            "AnyChat"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "hhttps://github.com/JS-banana/anychat/releases/download/v$version/AnyChat_$version_x64-setup.exe#/dl.7z"
+    }
+}
