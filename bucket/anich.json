@@ -1,10 +1,10 @@
 {
-    "version": "1.5.11",
+    "version": "1.5.12",
     "description": "一个支持超分辨率的在线动漫弹幕APP。多平台，多番剧源，多弹幕，高清无广告。追番看番必备软件。",
     "homepage": "https://github.com/Sle2p/AniCh",
     "license": "MIT",
-    "url": "https://github.com/Sle2p/AniCh/releases/download/1.5.11/anich-windows-1.5.11.zip",
-    "hash": "10ac5584a76f7e2c030ad4c4b5adc76d61899ab2febb0ac1f1281806f60be47e",
+    "url": "https://github.com/Sle2p/AniCh/releases/download/1.5.12/anich-windows-1.5.12.zip",
+    "hash": "43592c96d9f5cd665aa2315cb8675f3c5ce896c6a7e9b2cb6d9f7f875719d192",
     "shortcuts": [
         [
             "anich.exe",
