@@ -1,0 +1,21 @@
+{
+    "version": "0.1.13",
+    "description": "本地优先的多 AI 对话留存与管理桌面工作台，在不改变原有使用习惯的前提下自动捕获并归档与多个 AI 平台的对话记录。",
+    "homepage": "https://github.com/JS-banana/amberkeeper",
+    "license": "MIT",
+    "url": "https://github.com/JS-banana/AmberKeeper/releases/download/v0.1.13/AmberKeeper.Setup.0.1.13.exe#/dl.7z",
+    "hash": "sha256:e6bc7548a1dd4a8f9d2e09c2c8a3289c521e377d6022e3d7e280fdd8a3a908b8",
+    "installer": {
+        "script": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\Uninstall*.exe\" -Force -Recurse -ErrorAction SilentlyContinue"
+    },
+    "shortcuts": [
+        [
+            "AmberKeeper.exe",
+            "AmberKeeper"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/JS-banana/AmberKeeper/releases/download/v$version/AmberKeeper.Setup.$version.exe#/dl.7z"
+    }
+}
