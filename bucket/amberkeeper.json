@@ -6,7 +6,11 @@
     "url": "https://github.com/JS-banana/AmberKeeper/releases/download/v0.1.13/AmberKeeper.Setup.0.1.13.exe#/dl.7z",
     "hash": "sha256:e6bc7548a1dd4a8f9d2e09c2c8a3289c521e377d6022e3d7e280fdd8a3a908b8",
     "installer": {
-        "script": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\Uninstall*.exe\" -Force -Recurse -ErrorAction SilentlyContinue"
+        "script": [
+            "Remove-Item \"$dir\\*\" -Exclude 'app-64.7z' -Recurse -ErrorAction SilentlyContinue",
+            "Expand-7zipArchive \"$dir\\app-64.7z\" \"$dir\"",
+            "Remove-Item \"$dir\\app-64.7z\" -Force"
+        ]
     },
     "shortcuts": [
         [
