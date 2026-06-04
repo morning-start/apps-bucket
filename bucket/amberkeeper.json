@@ -5,7 +5,6 @@
     "license": "MIT",
     "url": "https://github.com/JS-banana/AmberKeeper/releases/download/v0.1.13/AmberKeeper-0.1.13-win.zip",
     "hash": "sha256:984146c767258d5a50fa4b013e4712d6d2281203f24d3e99d913b73d03e94ba4",
-    "extract_dir": "AmberKeeper-win32-x64",
     "shortcuts": [
         [
             "AmberKeeper.exe",
