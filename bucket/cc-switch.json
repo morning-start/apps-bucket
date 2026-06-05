@@ -20,6 +20,10 @@
         "$persist_home_dir = Join-Path $persist_dir home",
         "& \"$bucketsdir\\apps\\scripts\\link.ps1\" $data_dir $persist_home_dir"
     ],
+    "post_uninstall": [
+        "$data_dir = Join-Path $env:USERPROFILE \".cc-switch\"",
+        "& \"$bucketsdir\\apps\\scripts\\unlink.ps1\" $data_dir"
+    ],
     "persist": [
         "home"
     ],

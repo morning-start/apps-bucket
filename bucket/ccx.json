@@ -12,9 +12,19 @@
   "pre_install": [
     "Remove-Item \"$dir\\`$PLUGINSDIR\" -Force -Recurse"
   ],
+  "post_install": [
+    "$appdata_dir = Join-Path $env:APPDATA 'ccx-desktop'",
+    "$persist_config_dir = Join-Path $persist_dir 'appdata'",
+    "& \"$bucketsdir\\apps\\scripts\\link.ps1\" $appdata_dir $persist_config_dir"
+  ],
+  "post_uninstall": [
+    "$appdata_dir = Join-Path $env:APPDATA 'ccx-desktop'",
+    "& \"$bucketsdir\\apps\\scripts\\unlink.ps1\" $appdata_dir"
+  ],
+  "persist": "appdata",
   "shortcuts": [
     [
-      "CCX Desktop.exe",
+      "ccx-desktop.exe",
       "CCX Desktop"
     ]
   ]
