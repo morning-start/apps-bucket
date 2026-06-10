@@ -1,31 +1,29 @@
 {
-  "version": "2.8.24",
-  "description": "Claude / Codex / Gemini API Proxy - 高性能 AI API 代理和协议转换网关",
-  "homepage": "https://github.com/BenedictKing/ccx",
-  "license": "MIT",
-  "url": "https://github.com/BenedictKing/ccx/releases/download/v2.8.24/CCX-Desktop-2.8.24-windows-amd64-setup.exe#/dl.7z",
-  "hash": "sha256:1107bfed8fd1450fec9d3bf8ae82c1cf03d5ba731362767beb437882ae84dc33",
-  "checkver": "github",
-  "autoupdate": {
-    "url": "https://github.com/BenedictKing/ccx/releases/download/v$version/CCX-Desktop-$version-windows-amd64-setup.exe#/dl.7z"
-  },
-  "pre_install": [
-    "Remove-Item \"$dir\\`$PLUGINSDIR\" -Force -Recurse"
-  ],
-  "post_install": [
-    "$appdata_dir = Join-Path $env:APPDATA 'ccx-desktop'",
-    "$persist_config_dir = Join-Path $persist_dir 'appdata'",
-    "& \"$bucketsdir\\apps\\scripts\\link.ps1\" $appdata_dir $persist_config_dir"
-  ],
-  "post_uninstall": [
-    "$appdata_dir = Join-Path $env:APPDATA 'ccx-desktop'",
-    "& \"$bucketsdir\\apps\\scripts\\unlink.ps1\" $appdata_dir"
-  ],
-  "persist": "appdata",
-  "shortcuts": [
-    [
-      "ccx-desktop.exe",
-      "CCX Desktop"
+    "version": "2.8.26",
+    "description": "Claude / Codex / Gemini API Proxy - 高性能 AI API 代理和协议转换网关",
+    "homepage": "https://github.com/BenedictKing/ccx",
+    "license": "MIT",
+    "url": "https://github.com/BenedictKing/ccx/releases/download/v2.8.26/CCX-Desktop-2.8.26-windows-amd64-setup.exe#/dl.7z",
+    "hash": "b407b8943118ef0c0b769276d297f2ba341ecd204bdf9c8c10d3bce00c2f0cf9",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/BenedictKing/ccx/releases/download/v$version/CCX-Desktop-$version-windows-amd64-setup.exe#/dl.7z"
+    },
+    "pre_install": "Remove-Item \"$dir\\`$PLUGINSDIR\" -Force -Recurse",
+    "post_install": [
+        "$appdata_dir = Join-Path $env:APPDATA 'ccx-desktop'",
+        "$persist_config_dir = Join-Path $persist_dir 'appdata'",
+        "& \"$bucketsdir\\apps\\scripts\\link.ps1\" $appdata_dir $persist_config_dir"
+    ],
+    "post_uninstall": [
+        "$appdata_dir = Join-Path $env:APPDATA 'ccx-desktop'",
+        "& \"$bucketsdir\\apps\\scripts\\unlink.ps1\" $appdata_dir"
+    ],
+    "persist": "appdata",
+    "shortcuts": [
+        [
+            "ccx-desktop.exe",
+            "CCX Desktop"
+        ]
     ]
-  ]
 }
