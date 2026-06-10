@@ -42,7 +42,7 @@
         "$persist_data_dir = Join-Path $persist_dir profile",
         "& \"$bucketsdir\\apps\\scripts\\link.ps1\" $appdata_dir $persist_data_dir",
         "$firefox_policies_json = Join-Path $persist_dir distribution firefox-policies.json",
-        "Copy-Item $bucketsdir\\apps-bucket\\scripts\\firefox-policies.json $firefox_policies_json"
+        "Copy-Item $bucketsdir\\apps\\scripts\\firefox-policies.json $firefox_policies_json"
     ],
     "post_uninstall": [
         "$appdata_dir = Join-Path $env:APPDATA \"\\Mozilla\\Firefox\\Profiles\\developer\"",
