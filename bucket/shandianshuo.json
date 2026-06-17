@@ -1,12 +1,11 @@
 {
-    "version": "0.6.9",
-    "description": "AI Voice Input",
+    "version": "0.7.1",
+    "description": "AI Voice Input - 一个沟通 Agent",
     "homepage": "https://shandianshuo.cn/",
-    "license": "unknown",
+    "license": "Proprietary",
     "architecture": {
         "64bit": {
-            "url": "https://download.shandianshuo.cn/windows/shandianshuo_0.6.9_x64-setup.exe#/dl.7z",
-            "hash": "c2052805ba49a9ab6222f59893825c1f285d7462f53ccf8c7820f5b0fc9cc4ac"
+            "url": "https://download.shandianshuo.cn/windows/shandianshuo_0.7.1_x64-setup.exe#/dl.7z"
         }
     },
     "bin": "shandianshuo.exe",
@@ -26,7 +25,14 @@
         "$persist_data= Join-Path $persist_dir \"data\"",
         "& \"$bucketsdir\\apps\\scripts\\link.ps1\" $app_data $persist_data"
     ],
-    "checkver": "download.shandianshuo.cn/windows/shandianshuo_([\\d.]+)_x64-setup.exe",
+    "post_uninstall": [
+        "$app_data= Join-Path $env:APPDATA \"Shandianshuo\"",
+        "& \"$bucketsdir\\apps\\scripts\\unlink.ps1\" $app_data"
+    ],
+    "checkver": {
+        "url": "https://shandianshuo.cn/",
+        "regex": "download.shandianshuo.cn/macos/shandianshuo_([\\d.]+)_universal\\.dmg"
+    },
     "autoupdate": {
         "architecture": {
             "64bit": {
