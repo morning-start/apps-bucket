@@ -1,10 +1,10 @@
 {
-    "version": "0.1.13",
+    "version": "0.1.14",
     "description": "本地优先的多 AI 对话留存与管理桌面工作台，在不改变原有使用习惯的前提下自动捕获并归档与多个 AI 平台的对话记录。",
     "homepage": "https://github.com/JS-banana/amberkeeper",
     "license": "MIT",
-    "url": "https://github.com/JS-banana/AmberKeeper/releases/download/v0.1.13/AmberKeeper-0.1.13-win.zip",
-    "hash": "sha256:984146c767258d5a50fa4b013e4712d6d2281203f24d3e99d913b73d03e94ba4",
+    "url": "https://github.com/JS-banana/AmberKeeper/releases/download/v0.1.14/AmberKeeper-0.1.14-win.zip",
+    "hash": "15c982bd88f5f92857adcbf64133fdb665fd3663d91107a03811722782aad5d1",
     "shortcuts": [
         [
             "AmberKeeper.exe",
