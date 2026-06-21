@@ -10,11 +10,7 @@
         }
     },
     "installer": {
-        "script": [
-            "Remove-Item \"$dir\\*\" -Exclude '*.7z' -Recurse -Force",
-            "Expand-7zipArchive \"$dir\\*.7z\" \"$dir\"",
-            "Remove-Item \"$dir\\*.7z\" -Force"
-        ]
+        "script": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\Uninstall*.exe\" -Force -Recurse"
     },
     "shortcuts": [
         [
