@@ -11,7 +11,7 @@
     },
     "installer": {
         "script": [
-            "Remove-Item \"$dir\\*\" -Exclude '*.7z' -Recurse -ErrorAction SilentlyContinue",
+            "Remove-Item \"$dir\\*\" -Exclude '*.7z' -Recurse -Force",
             "Expand-7zipArchive \"$dir\\*.7z\" \"$dir\"",
             "Remove-Item \"$dir\\*.7z\" -Force"
         ]
