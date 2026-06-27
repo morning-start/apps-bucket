@@ -1,0 +1,29 @@
+{
+    "version": "0.13.2",
+    "description": "Open-source design editor with Figma compatibility and P2P collaboration",
+    "homepage": "https://github.com/open-pencil/open-pencil",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/open-pencil/open-pencil/releases/download/v0.13.2/OpenPencil_0.13.2_x64-setup.exe#/dl.7z",
+            "hash": "sha256:1e70b4b6565cefb8e543519f0e62274b0bdae4d2bb470ffa46b0c3d8a53aedbd"
+        }
+    },
+    "installer": {
+        "script": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\Uninstall*.exe\" -Force -Recurse"
+    },
+    "shortcuts": [
+        [
+            "OpenPencil.exe",
+            "Open Pencil"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/open-pencil/open-pencil/releases/download/v$version/OpenPencil_$version_x64-setup.exe#/dl.7z"
+            }
+        }
+    }
+}
