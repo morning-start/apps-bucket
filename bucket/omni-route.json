@@ -6,15 +6,14 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/diegosouzapw/OmniRoute/releases/download/v3.8.42/OmniRoute.exe#/dl.7z",
-            "hash": "sha256:d447dc0a9776066d67bce55931f1aa76cc83402ca85fa8e87029f5e15e091691"
+            "hash": "sha256:d447dc0a9776066d67bce55931f1aa76cc83402ca85fa8e87029f5e15e091691",
+            "installer": {
+                "script": [
+                    "Expand-7ZipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\" -Removal",
+                    "Remove-Item \"$dir\\`$PLUGINSDIR\",\"$dir\\`$R0\" -Force -Recurse"
+                ]
+            }
         }
-    },
-    "installer": {
-        "script": [
-            "Remove-Item \"$dir\\*\" -Exclude '*.7z' -Recurse -Force",
-            "Expand-7zipArchive \"$dir\\*.7z\" \"$dir\"",
-            "Remove-Item \"$dir\\*.7z\" -Force"
-        ]
     },
     "shortcuts": [
         [
