@@ -5,8 +5,7 @@
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/open-pencil/open-pencil/releases/download/v0.13.2/OpenPencil_0.13.2_x64-setup.exe#/dl.7z",
-            "hash": "sha256:1e70b4b6565cefb8e543519f0e62274b0bdae4d2bb470ffa46b0c3d8a53aedbd"
+            "url": "https://github.com/open-pencil/open-pencil/releases/download/v0.13.2/OpenPencil_0.13.2_x64-setup.exe#/dl.7z"
         }
     },
     "installer": {
