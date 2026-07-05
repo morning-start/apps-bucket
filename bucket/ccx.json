@@ -1,10 +1,10 @@
 {
-    "version": "2.9.34",
+    "version": "2.9.36",
     "description": "Claude / Codex / Gemini API Proxy - 高性能 AI API 代理和协议转换网关",
     "homepage": "https://github.com/BenedictKing/ccx",
     "license": "MIT",
-    "url": "https://github.com/BenedictKing/ccx/releases/download/v2.9.34/CCX-Desktop-2.9.34-windows-amd64-setup.exe#/dl.7z",
-    "hash": "ca633e038b1d51155ddea83d01501192e7b6999f9f7324d11e11d4b9b27105d4",
+    "url": "https://github.com/BenedictKing/ccx/releases/download/v2.9.36/CCX-Desktop-2.9.36-windows-amd64-setup.exe#/dl.7z",
+    "hash": "ee15238e3b85d0626e832904154eac9939209d33dec31ecfa7423e15c981f4fd",
     "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/BenedictKing/ccx/releases/download/v$version/CCX-Desktop-$version-windows-amd64-setup.exe#/dl.7z"
