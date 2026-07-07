@@ -1,12 +1,12 @@
 {
-    "version": "3.8.45",
+    "version": "3.8.46",
     "description": "Multi-account management tool for social media and messaging platforms",
     "homepage": "https://github.com/diegosouzapw/OmniRoute",
     "license": "Proprietary",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/diegosouzapw/OmniRoute/releases/download/v3.8.45/OmniRoute.exe",
-            "hash": "f5db02279cdd5d3cdb90ecdcc1b5e0089a0bf1a07ce4471acd11ce21a74447f1",
+            "url": "https://github.com/diegosouzapw/OmniRoute/releases/download/v3.8.46/OmniRoute.exe",
+            "hash": "e0367827af91be42015ec87a4f065b48a0dfa7cff04234e3d7cd9fd8b81a6cc0",
             "installer": {
                 "script": [
                     "Expand-7ZipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\" -Removal",
