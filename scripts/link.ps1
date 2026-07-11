@@ -1,65 +1,65 @@
 function New-SymlinkIfNotExists {
     [CmdletBinding(SupportsShouldProcess = $true)]
     param (
-        [Parameter(Mandatory = $true, HelpMessage = "要创建的符号链接路径")]
+        [Parameter(Mandatory = $true, HelpMessage = "The path of the symlink to create")]
         [string]$SymlinkPath,
 
-        [Parameter(Mandatory = $true, HelpMessage = "符号链接指向的目标路径")]
+        [Parameter(Mandatory = $true, HelpMessage = "The target path the symlink points to")]
         [string]$TargetPath
     )
 
-    # 检查目标路径是否已为符号链接
+    # Check whether the target path is already a symlink
     if (Test-Path -Path $SymlinkPath -ErrorAction SilentlyContinue) {
         $item = Get-Item -Path $SymlinkPath -Force -ErrorAction SilentlyContinue
         if ($item -and $item.Attributes.HasFlag([System.IO.FileAttributes]::ReparsePoint)) {
-            Write-Verbose "$SymlinkPath 已是符号链接，跳过操作"
+            Write-Verbose "$SymlinkPath is already a symlink, skipping"
             return
         }
     }
 
     try {
-        # 确保目标目录存在
+        # Ensure the target directory exists
         if (-not (Test-Path -Path $TargetPath)) {
-            if ($PSCmdlet.ShouldProcess($TargetPath, "创建目标目录")) {
+            if ($PSCmdlet.ShouldProcess($TargetPath, "Create target directory")) {
                 New-Item -ItemType Directory -Path $TargetPath -Force | Out-Null
-                Write-Verbose "已创建目标目录: $TargetPath"
+                Write-Verbose "Created target directory: $TargetPath"
             }
         }
 
-        # 处理已存在的源路径
+        # Handle an existing source path
         if (Test-Path -Path $SymlinkPath) {
-            # 检查目录是否为空
+            # Check whether the directory is empty
             $hasContent = (Get-ChildItem -Path $SymlinkPath -Force -ErrorAction SilentlyContinue | Measure-Object).Count -gt 0
 
             if ($hasContent) {
-                if ($PSCmdlet.ShouldProcess($SymlinkPath, "移动内容到目标目录 $TargetPath")) {
-                    # 移动目录内容而非目录本身
+                if ($PSCmdlet.ShouldProcess($SymlinkPath, "Move content to target directory $TargetPath")) {
+                    # Move the directory contents, not the directory itself
                     Move-Item -Path "$SymlinkPath\*" -Destination $TargetPath -Force -ErrorAction Stop
-                    Write-Verbose "已将 $SymlinkPath 内容移动到 $TargetPath"
+                    Write-Verbose "Moved $SymlinkPath content to $TargetPath"
                 }
             }
 
-            # 删除原路径（无论是否为空）
-            if ($PSCmdlet.ShouldProcess($SymlinkPath, "删除原路径")) {
+            # Remove the original path (whether empty or not)
+            if ($PSCmdlet.ShouldProcess($SymlinkPath, "Remove original path")) {
                 Remove-Item -Path $SymlinkPath -Recurse -Force -ErrorAction Stop
-                Write-Verbose "已删除原路径: $SymlinkPath"
+                Write-Verbose "Removed original path: $SymlinkPath"
             }
         }
 
-        # 创建符号链接
-        if ($PSCmdlet.ShouldProcess($SymlinkPath, "创建指向 $TargetPath 的符号链接")) {
+        # Create the symlink
+        if ($PSCmdlet.ShouldProcess($SymlinkPath, "Create symlink pointing to $TargetPath")) {
             New-Item -ItemType SymbolicLink -Path $SymlinkPath -Target $TargetPath -Force -ErrorAction Stop | Out-Null
-            Write-Verbose "已成功创建符号链接: $SymlinkPath -> $TargetPath"
+            Write-Verbose "Successfully created symlink: $SymlinkPath -> $TargetPath"
         }
     } catch {
-        Write-Error "操作失败: $_"
-        throw  # 重新抛出异常以便上层处理
+        Write-Error "Operation failed: $_"
+        throw  # Re-throw so the caller can handle it
     }
 }
 
-# 安全调用
+# Safe invocation
 if ($args.Count -lt 2) {
-    Write-Error "用法: link.ps1 <SymlinkPath> <TargetPath>"
+    Write-Error "Usage: link.ps1 <SymlinkPath> <TargetPath>"
     exit 1
 }
 
