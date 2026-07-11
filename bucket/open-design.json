@@ -15,7 +15,10 @@
             "Open Design"
         ]
     ],
-    "checkver": "github",
+    "checkver": {
+        "github": "https://github.com/nexu-io/open-design",
+        "regex": "open-design-v([\\d.]+)"
+    },
     "autoupdate": {
         "architecture": {
             "64bit": {

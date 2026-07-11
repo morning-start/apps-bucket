@@ -12,8 +12,8 @@
         ]
     ],
     "checkver": {
-        "url": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/latest",
-        "regex": "/releases/download/([\\d.]+)/PiliPlus_windows_([\\d.]+)\\+(\\d+)_x64_portable\\.zip"
+        "url": "https://api.github.com/repos/bggRGjQaUbCoE/PiliPlus/releases/latest",
+        "regex": "\"tag_name\":\\s*\"([\\d.]+)\".*?PiliPlus_windows_([\\d.]+)\\+(\\d+)_x64_portable\\.zip"
     },
     "autoupdate": {
         "url": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/$version/PiliPlus_windows_$match2+$match3_x64_portable.zip"
