@@ -5,7 +5,7 @@
     "license": "AGPL-3.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/morning-start/silk/releases/download/v0.3.2/silk_0.3.0_x64-setup.exe",
+            "url": "https://github.com/morning-start/silk/releases/download/v0.3.2/silk_0.3.0_x64-setup.exe#/dl.7z",
             "hash": "sha256:b1692410b7015144b155e546dc448fd0d3595c4376016b7d6bb4ff2b00d9d16a"
         }
     },
@@ -24,7 +24,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/morning-start/silk/releases/download/v$version/silk_$version_x64-setup.exe"
+                "url": "https://github.com/morning-start/silk/releases/download/v$version/silk_$version_x64-setup.exe#/dl.7z"
             }
         }
     }
