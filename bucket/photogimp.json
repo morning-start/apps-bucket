@@ -1,0 +1,31 @@
+{
+    "version": "3.1",
+    "description": "让 GIMP 拥有 Photoshop 般外观、快捷键与工具布局的配置预设包（适用于 GIMP 3.0+）。",
+    "homepage": "https://github.com/Diolinux/PhotoGIMP",
+    "license": "GPL-3.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Diolinux/PhotoGIMP/releases/download/3.1/PhotoGIMP.zip",
+            "hash": "sha256:de6a17ffb70000051372d84141b7e69fc2e60a0af3bd3b3100c9afd5e0ff3ae6"
+        }
+    },
+    "post_install": [
+        "$prof = \"$env:APPDATA\\GIMP\\3.0\"",
+        "if (Test-Path $prof) { $bak = \"$env:APPDATA\\GIMP\\3.0.bak-\" + (Get-Date -Format yyyyMMddHHmmss); Move-Item -Path $prof -Destination $bak -Force }",
+        "else { New-Item -ItemType Directory -Force -Path $prof | Out-Null }",
+        "$src = if (Test-Path \"$dir\\3.0\") { \"$dir\\3.0\" } else { \"$dir\" }",
+        "Copy-Item -Path \"$src\\*\" -Destination $prof -Recurse -Force"
+    ],
+    "notes": "安装时会自动把已有的 %APPDATA%\\GIMP\\3.0 重命名为 3.0.bak-<时间戳> 进行备份（位于 %APPDATA%\\GIMP\\ 下）。需先安装并运行过 GIMP 3.0+ 以生成配置目录；卸载本包不会自动删除这些备份，也不会回退 GIMP 配置。",
+    "checkver": {
+        "github": "https://github.com/Diolinux/PhotoGIMP",
+        "regex": "([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Diolinux/PhotoGIMP/releases/download/$version/PhotoGIMP.zip"
+            }
+        }
+    }
+}
