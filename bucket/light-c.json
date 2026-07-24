@@ -1,0 +1,29 @@
+{
+    "version": "2.13.0",
+    "description": "轻量级 Windows C 盘智能清理工具（Tauri 2）：一键垃圾扫描、大文件清理、社交软件缓存专清、系统瘦身与卸载残留分析。",
+    "homepage": "https://github.com/Chunyu33/light-c",
+    "license": "https://github.com/Chunyu33/light-c/blob/v2.13.0/LICENSE",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Chunyu33/light-c/releases/download/v2.13.0/LightC_2.13.0_x64-setup.exe",
+            "hash": "sha256:d01027fbed5ad59e3f169a48b6e7bc8bde2a3b3aa792020e6e844047602dfb14"
+        }
+    },
+    "bin": "LightC",
+    "shortcuts": [
+        "LightC"
+    ],
+    "checkver": {
+        "url": "https://api.github.com/repos/Chunyu33/light-c/releases/latest",
+        "jsonpath": "$.tag_name",
+        "regex": "([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Chunyu33/light-c/releases/download/v$version/LightC_$version_x64-setup.exe"
+            }
+        }
+    },
+    "notes": "依赖系统已安装 WebView2 Runtime（Win10/11 通常自带）。部分功能（系统瘦身、旧驱动清理等）需以管理员身份运行。"
+}
