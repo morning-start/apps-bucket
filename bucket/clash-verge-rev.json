@@ -1,0 +1,41 @@
+{
+    "version": "2.5.2",
+    "description": "基于 Clash Meta 内核的跨平台代理 GUI（Tauri 2）：订阅管理、规则分流、系统代理与 TUN 模式。",
+    "homepage": "https://github.com/clash-verge-rev/clash-verge-rev",
+    "license": "GPL-3.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v2.5.2/Clash%20Verge_2.5.2_x64-setup.exe",
+            "hash": "sha256:ba42f00b1082e352352080170fe86ae411bcc854cb13f1b8bebc9025e8a7cbf4"
+        },
+        "arm64": {
+            "url": "https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v2.5.2/Clash%20Verge_2.5.2_arm64-setup.exe",
+            "hash": "sha256:973fafb5f154e541b34c1315f7de7440daf68d05f2e52fa08da2bcc71b6c3214"
+        }
+    },
+    "bin": {
+        "Clash Verge.exe": "clash-verge"
+    },
+    "shortcuts": [
+        [
+            "Clash Verge.exe",
+            "Clash Verge Rev"
+        ]
+    ],
+    "checkver": {
+        "url": "https://api.github.com/repos/clash-verge-rev/clash-verge-rev/releases/latest",
+        "jsonpath": "$.tag_name",
+        "regex": "([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v$version/Clash%20Verge_$version_x64-setup.exe"
+            },
+            "arm64": {
+                "url": "https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v$version/Clash%20Verge_$version_arm64-setup.exe"
+            }
+        }
+    },
+    "notes": "依赖系统已安装 WebView2 Runtime（Win10/22H2 及以后通常自带；若启动报错可改用仓库提供的 fixed_webview2 版安装包）。TUN 模式需以管理员身份运行。"
+}
