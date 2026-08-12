@@ -1,12 +1,12 @@
 {
-    "version": "0.3.2",
+    "version": "0.4.1",
     "description": "A Rust-powered download manager with HTTP, FTP, BitTorrent and HLS/DASH streaming support.",
     "license": "GPL-3.0-or-later",
     "homepage": "https://fluxdown.zerx.dev/",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/zerx-lab/FluxDown/releases/download/v0.3.2/FluxDown-0.3.2-windows-x64-portable.zip",
-            "hash": "376dba579e4762210636faa5b583b23f067416dbbf2f35c3f97126cae1cad83c"
+            "url": "https://github.com/zerx-lab/FluxDown/releases/download/v0.4.1/FluxDown-0.4.1-windows-x64-portable.zip",
+            "hash": "f5fefdc194eb621c34c3717dc28aa7dbe0b68f57e74c7ba058a6a0d8c031871e"
         }
     },
     "shortcuts": [
