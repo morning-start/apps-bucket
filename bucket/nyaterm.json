@@ -1,0 +1,36 @@
+{
+    "version": "1.2.3",
+    "description": "基于 Tauri / React / Rust 构建的现代远程终端工作区，集成 SSH、本地 shells、Telnet、串口、RDP、VNC、SFTP、隧道、OTP、AI 辅助与加密同步。",
+    "homepage": "https://github.com/nyakang/nyaterm",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/nyakang/nyaterm/releases/download/v1.2.3/NyaTerm_1.2.3_windows_x64-setup.exe",
+            "hash": "7fa27bb605c9d30cd298a39e79e596ece29a03029327aee4043f04ca7a70c28c"
+        },
+        "arm64": {
+            "url": "https://github.com/nyakang/nyaterm/releases/download/v1.2.3/NyaTerm_1.2.3_windows_arm64-setup.exe",
+            "hash": "b16b366fa7a0a20cc2ee2733b61cdaf049fa6174a379e0721199f5077414084c"
+        }
+    },
+    "bin": "NyaTerm",
+    "shortcuts": [
+        [
+            "NyaTerm.exe",
+            "NyaTerm"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/nyakang/nyaterm/releases"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/nyakang/nyaterm/releases/download/v$version/NyaTerm_$version_windows_x64-setup.exe"
+            },
+            "arm64": {
+                "url": "https://github.com/nyakang/nyaterm/releases/download/v$version/NyaTerm_$version_windows_arm64-setup.exe"
+            }
+        }
+    }
+}
