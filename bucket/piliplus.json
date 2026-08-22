@@ -1,9 +1,9 @@
 {
-    "version": "2.1.1",
+    "version": "2.1.1.2",
     "description": "使用Flutter开发的BiliBili第三方客户端",
     "homepage": "https://github.com/bggRGjQaUbCoE/PiliPlus",
     "license": "GNU",
-    "url": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/2.1.1/PiliPlus_windows_2.1.1+5225_x64_portable.zip",
+    "url": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/2.1.1.2/PiliPlus_windows_2.1.1+5231_x64_portable.zip",
     "extract_dir": "PiliPlus-Win",
     "shortcuts": [
         [
