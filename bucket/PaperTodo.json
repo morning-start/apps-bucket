@@ -5,7 +5,7 @@
     "license": "Proprietary",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/snownico0722/PaperTodo/releases/download/v3.3/PaperTodo-v3.3-win-x64-no-runtime.exe",
+            "url": "https://github.com/snownico0722/PaperTodo/releases/download/v3.3/PaperTodo-v3.3-win-x64-no-runtime.exe#/PaperTodo.exe",
             "hash": "13f07498942c6785a6ec99f2a8e76d9feee9037f3392c647e26521bdaede2ec7"
         }
     },
@@ -22,7 +22,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/snownico0722/PaperTodo/releases/download/v$version/PaperTodo-v$version-win-x64-no-runtime.exe"
+                "url": "https://github.com/snownico0722/PaperTodo/releases/download/v$version/PaperTodo-v$version-win-x64-no-runtime.exe#/PaperTodo.exe"
             }
         }
     }
