@@ -5,11 +5,10 @@
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/router-for-me/EasyCLIProxyAPI/releases/download/v0.2.61/EasyCLIProxyAPI-v0.2.61-Windows-amd64.zip",
+            "url": "https://github.com/router-for-me/EasyCLIProxyAPI/releases/download/v0.2.61/EasyCLIProxyAPI-v0.2.61-Windows-amd64.zip#/EasyCLIProxyAPI",
             "hash": "cce692456a5ad32243dc4f997751ad0a1323e21091479c1515fcd28106d70c40"
         }
     },
-    "extract_dir": "EasyCLIProxyAPI-v0.2.61-Windows-amd64",
     "bin": "EasyCLIProxyAPI.exe",
     "shortcuts": [
         [
@@ -23,8 +22,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/router-for-me/EasyCLIProxyAPI/releases/download/v$version/EasyCLIProxyAPI-v$version-Windows-amd64.zip",
-                "extract_dir": "EasyCLIProxyAPI-v$version-Windows-amd64"
+                "url": "https://github.com/router-for-me/EasyCLIProxyAPI/releases/download/v$version/EasyCLIProxyAPI-v$version-Windows-amd64.zip#/EasyCLIProxyAPI"
             }
         }
     }
