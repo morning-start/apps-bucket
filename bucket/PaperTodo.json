@@ -1,0 +1,29 @@
+{
+    "version": "3.3",
+    "description": "极简 Windows 桌面便签工具。让桌面上有几张安静、可用、不会打扰人的纸。WPF 原生，支持待办与 Markdown。",
+    "homepage": "https://github.com/snownico0722/PaperTodo",
+    "license": "Proprietary",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/snownico0722/PaperTodo/releases/download/v3.3/PaperTodo-v3.3-win-x64-no-runtime.exe",
+            "hash": "13f07498942c6785a6ec99f2a8e76d9feee9037f3392c647e26521bdaede2ec7"
+        }
+    },
+    "bin": "PaperTodo.exe",
+    "shortcuts": [
+        [
+            "PaperTodo.exe",
+            "PaperTodo"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/snownico0722/PaperTodo"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/snownico0722/PaperTodo/releases/download/v$version/PaperTodo-v$version-win-x64-no-runtime.exe"
+            }
+        }
+    }
+}
