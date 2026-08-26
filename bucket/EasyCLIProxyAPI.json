@@ -9,6 +9,7 @@
             "hash": "8402f8248bae4fec4ec83255d85359ffd1c78afa509149a4020225ecd6a62283"
         }
     },
+    "extract_dir": "EasyCLIProxyAPI-v0.2.63-Windows-amd64",
     "shortcuts": [
         [
             "EasyCLIProxyAPI.exe",
@@ -21,7 +22,8 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/router-for-me/EasyCLIProxyAPI/releases/download/v$version/EasyCLIProxyAPI-v$version-Windows-amd64.zip#/EasyCLIProxyAPI.zip"
+                "url": "https://github.com/router-for-me/EasyCLIProxyAPI/releases/download/v$version/EasyCLIProxyAPI-v$version-Windows-amd64.zip#/EasyCLIProxyAPI.zip",
+                "extract_dir": "EasyCLIProxyAPI-v$version-Windows-amd64"
             }
         }
     }
