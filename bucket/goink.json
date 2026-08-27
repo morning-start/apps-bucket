@@ -1,0 +1,29 @@
+{
+    "version": "1.4.2",
+    "description": "Goink 桌面 AI 小说创作助手，对话式写作 + 自动状态追踪 + 本地语义搜索。跨平台开箱即用。",
+    "homepage": "https://github.com/sigpanic/goink",
+    "license": "AGPL-3.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/sigpanic/goink/releases/download/v1.4.2/goink-v1.4.2-windows-amd64.exe#/goink.exe",
+            "hash": "16916aa6bc9826c8621d7202b7b4fe40d810710ca5be4dbe3da0416f58c547ce"
+        }
+    },
+    "bin": "goink.exe",
+    "shortcuts": [
+        [
+            "goink.exe",
+            "Goink"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/sigpanic/goink"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/sigpanic/goink/releases/download/v$version/goink-v$version-windows-amd64.exe#/goink.exe"
+            }
+        }
+    }
+}
