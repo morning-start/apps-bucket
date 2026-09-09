@@ -1,12 +1,12 @@
 {
-    "version": "0.9.0",
+    "version": "0.9.1",
     "description": "本地 AI 多模型网关桌面应用，通过单一本地 HTTP 端点实现多协议自动互转与故障回退，API 密钥均在本地加密存储。",
     "homepage": "https://github.com/morning-start/silk",
     "license": "AGPL-3.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/morning-start/silk/releases/download/v0.9.0/silk_0.9.0_x64-setup.exe#/dl.7z",
-            "hash": "8c4c0cffa8ca38381c5395f8f1a613d011471f7fab74f8b0610ed9e48741e1f8"
+            "url": "https://github.com/morning-start/silk/releases/download/v0.9.1/silk_0.9.1_x64-setup.exe#/dl.7z",
+            "hash": "afef5382c8288a389e152aae82da279b40e773c6ec74ecf51c17749f456a9a0c"
         }
     },
     "bin": "silk.exe",
