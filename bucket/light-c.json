@@ -1,12 +1,12 @@
 {
-    "version": "2.16.8",
+    "version": "2.16.9",
     "description": "轻量级 Windows C 盘智能清理工具（Tauri 2）：一键垃圾扫描、大文件清理、社交软件缓存专清、系统瘦身与卸载残留分析。",
     "homepage": "https://github.com/Chunyu33/light-c",
     "license": "https://github.com/Chunyu33/light-c/blob/v2.13.0/LICENSE",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Chunyu33/light-c/releases/download/v2.16.8/LightC_2.16.8_x64-setup.exe",
-            "hash": "e8987a78cc28c5730dc9d5c020355adc6537718a26d0f1c33def11428afeb6fa"
+            "url": "https://github.com/Chunyu33/light-c/releases/download/v2.16.9/LightC_2.16.9_x64-setup.exe",
+            "hash": "f47d5c615587fd65510c0dbfac5798fbd470ad94fe4cb765c931095998a8728f"
         }
     },
     "bin": "LightC",
