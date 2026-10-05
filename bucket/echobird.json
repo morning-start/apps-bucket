@@ -1,12 +1,12 @@
 {
-    "version": "5.8.6",
+    "version": "5.8.7",
     "description": "One-Click Install All AI Tools - 跨平台桌面应用，一键安装和管理 AI 开发工具",
     "homepage": "https://github.com/edison7009/EchoBird",
     "license": "BUSL-1.1",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/edison7009/EchoBird/releases/download/v5.8.6/EchoBird_5.8.6_Windows_x64-setup.exe#/dl.7z",
-            "hash": "fbacb595ad5163f02dca144b030dd295d26648b00e93724e01251ed9ac9792e5"
+            "url": "https://github.com/edison7009/EchoBird/releases/download/v5.8.7/EchoBird_5.8.7_Windows_x64-setup.exe#/dl.7z",
+            "hash": "28897a94187947f1bd897bfbdc135853b627951bc26b4f1204a06bd7c5b22bb4"
         }
     },
     "installer": {
