@@ -1,12 +1,12 @@
 {
-    "version": "0.3.46",
+    "version": "0.3.47",
     "description": "CLIProxyAPI 桌面 GUI 客户端。基于 Tauri v2 构建，提供图形化配置界面、自动更新、系统托盘和一键启停功能。",
     "homepage": "https://github.com/router-for-me/EasyCLIProxyAPI",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/router-for-me/EasyCLIProxyAPI/releases/download/v0.3.46/EasyCLIProxyAPI-v0.3.46-Windows-amd64.zip#/EasyCLIProxyAPI.zip",
-            "hash": "153b4ae7241edf8dc26de6bd718a33023186ebc79568e497f2c17b915dfa4b4b"
+            "url": "https://github.com/router-for-me/EasyCLIProxyAPI/releases/download/v0.3.47/EasyCLIProxyAPI-v0.3.47-Windows-amd64.zip#/EasyCLIProxyAPI.zip",
+            "hash": "cb27b8a1d7b90f5fd791a1298bbcac11b0d24d45ae648a4abb3506043bc17d9e"
         }
     },
     "extract_dir": "EasyCLIProxyAPI-v0.2.63-Windows-amd64",
