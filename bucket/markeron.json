@@ -1,12 +1,12 @@
 {
-    "version": "2.35.4",
+    "version": "2.35.5",
     "description": "轻量级屏幕标注工具：通过快捷键在桌面任意位置即时绘制、高亮与标注，适用于演示、教学、会议与录屏。",
     "homepage": "https://github.com/ifer47/markeron",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/ifer47/markeron/releases/download/v2.35.4/MarkerOn_2.35.4_x64-setup.exe",
-            "hash": "27896e32ccf810a98ccc9a7e8cc3517c5318a33a16f38a7d6d57a7d27bc867c9"
+            "url": "https://github.com/ifer47/markeron/releases/download/v2.35.5/MarkerOn_2.35.5_x64-setup.exe",
+            "hash": "3f3dfdcc7a686e77242b7ab2e042299c144ca95cc3bd76ae4a094e0b30ebb561"
         }
     },
     "shortcuts": [
